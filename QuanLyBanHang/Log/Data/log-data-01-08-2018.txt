@@ -1,0 +1,496 @@
+08-01-2018 :: 21:25:40 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 21:25:41 : Query success.
+08-01-2018 :: 21:25:41 : Có 0 dòng data
+08-01-2018 :: 21:25:41 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 21:25:41 : Query success.
+08-01-2018 :: 21:25:41 : Có 1 dòng data
+08-01-2018 :: 21:25:44 : Query getLstGuessProvider : select row_number()OVER(ORDER BY per.person_id asc) as STT, per.person_id, person_name, person_address, person_phone, (case when deal.num_deal IS NULL THEN 0 ELSE deal.num_deal END ) as num_deal, (case deal.date_deal when NULL THEN '' ELSE deal.date_deal END ) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson from tb_person per left outer join     (select count(bi.person_id) as num_deal     ,per.person_id     ,max(bill_date) as date_deal     From tb_person per left join tb_bill bi     on per.person_id = bi.person_id     where bi.del_fg = 0     group by per.person_id) deal on per.person_id = deal.person_id where per.del_fg = 0 group by deal.date_deal,deal.num_deal,per.person_id,person_name,person_address,person_phone,typeperson
+08-01-2018 :: 21:25:44 : Query success.
+08-01-2018 :: 21:25:44 : Có 4 dòng data
+08-01-2018 :: 21:25:45 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 21:25:45 : Query success.
+08-01-2018 :: 21:25:45 : Có 2 dòng data
+08-01-2018 :: 21:25:45 : Query getLstProvider :   Select person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 21:25:45 : Query success.
+08-01-2018 :: 21:25:47 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 21:25:47 : Query success.
+08-01-2018 :: 21:25:47 : Có 2 dòng data
+08-01-2018 :: 21:25:47 : Query getLstProvider :   Select person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 21:25:47 : Query success.
+08-01-2018 :: 21:25:48 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 21:25:48 : Query success.
+08-01-2018 :: 21:25:48 : Có 1 dòng data
+08-01-2018 :: 21:25:48 : Query getAllCategory : select row_number()OVER(ORDER BY category_id asc) as STT,category_id,category_name from tb_category
+08-01-2018 :: 21:25:48 : Query success.
+08-01-2018 :: 21:25:48 : Query getAllUnit : select row_number()OVER(ORDER BY unit_id asc) as STT,unit_id,unit_name from tb_unit
+08-01-2018 :: 21:25:48 : Query success.
+08-01-2018 :: 21:25:49 : Query getLstGuessProvider : select row_number()OVER(ORDER BY per.person_id asc) as STT, per.person_id, person_name, person_address, person_phone, (case when deal.num_deal IS NULL THEN 0 ELSE deal.num_deal END ) as num_deal, (case deal.date_deal when NULL THEN '' ELSE deal.date_deal END ) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson from tb_person per left outer join     (select count(bi.person_id) as num_deal     ,per.person_id     ,max(bill_date) as date_deal     From tb_person per left join tb_bill bi     on per.person_id = bi.person_id     where bi.del_fg = 0     group by per.person_id) deal on per.person_id = deal.person_id where per.del_fg = 0 group by deal.date_deal,deal.num_deal,per.person_id,person_name,person_address,person_phone,typeperson
+08-01-2018 :: 21:25:49 : Query success.
+08-01-2018 :: 21:25:49 : Có 4 dòng data
+08-01-2018 :: 21:25:49 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 21:25:49 : Query success.
+08-01-2018 :: 21:25:49 : Có 0 dòng data
+08-01-2018 :: 21:25:49 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 21:25:49 : Query success.
+08-01-2018 :: 21:25:49 : Có 1 dòng data
+08-01-2018 :: 21:25:50 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 21:25:50 : Query success.
+08-01-2018 :: 21:25:50 : Có 2 dòng data
+08-01-2018 :: 21:25:50 : Query getLstProvider :   Select person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 21:25:50 : Query success.
+08-01-2018 :: 21:25:51 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 21:25:51 : Query success.
+08-01-2018 :: 21:25:51 : Có 1 dòng data
+08-01-2018 :: 21:25:51 : Query getAllCategory : select row_number()OVER(ORDER BY category_id asc) as STT,category_id,category_name from tb_category
+08-01-2018 :: 21:25:51 : Query success.
+08-01-2018 :: 21:25:51 : Query getAllUnit : select row_number()OVER(ORDER BY unit_id asc) as STT,unit_id,unit_name from tb_unit
+08-01-2018 :: 21:25:51 : Query success.
+08-01-2018 :: 22:11:01 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 22:11:01 : Query success.
+08-01-2018 :: 22:11:01 : Có 0 dòng data
+08-01-2018 :: 22:11:01 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 22:11:02 : Query success.
+08-01-2018 :: 22:11:02 : Có 1 dòng data
+08-01-2018 :: 22:11:43 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 22:11:43 : Query success.
+08-01-2018 :: 22:11:43 : Có 1 dòng data
+08-01-2018 :: 22:11:43 : Query getAllCategory : select row_number()OVER(ORDER BY category_id asc) as STT,category_id,category_name from tb_category
+08-01-2018 :: 22:11:43 : Query success.
+08-01-2018 :: 22:11:43 : Query getAllUnit : select row_number()OVER(ORDER BY unit_id asc) as STT,unit_id,unit_name from tb_unit
+08-01-2018 :: 22:11:43 : Query success.
+08-01-2018 :: 22:11:44 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 22:11:44 : Query success.
+08-01-2018 :: 22:11:44 : Có 2 dòng data
+08-01-2018 :: 22:11:44 : Query getLstProvider :   Select person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 22:11:44 : Query success.
+08-01-2018 :: 22:15:43 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 22:15:43 : Query success.
+08-01-2018 :: 22:15:43 : Có 0 dòng data
+08-01-2018 :: 22:15:43 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 22:15:43 : Query success.
+08-01-2018 :: 22:15:43 : Có 1 dòng data
+08-01-2018 :: 22:15:50 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 22:15:50 : Query success.
+08-01-2018 :: 22:15:50 : Có 2 dòng data
+08-01-2018 :: 22:15:50 : Query getLstProvider :   Select person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 22:15:50 : Query success.
+08-01-2018 :: 22:17:28 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 22:17:28 : Query success.
+08-01-2018 :: 22:17:28 : Có 0 dòng data
+08-01-2018 :: 22:17:28 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 22:17:28 : Query success.
+08-01-2018 :: 22:17:28 : Có 1 dòng data
+08-01-2018 :: 22:17:39 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 22:17:39 : Query success.
+08-01-2018 :: 22:17:39 : Có 2 dòng data
+08-01-2018 :: 22:17:39 : Query getLstProvider :   Select (case person_id when 111 then '<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 22:19:41 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 22:19:41 : Query success.
+08-01-2018 :: 22:19:41 : Có 0 dòng data
+08-01-2018 :: 22:19:41 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 22:19:41 : Query success.
+08-01-2018 :: 22:19:41 : Có 1 dòng data
+08-01-2018 :: 22:19:42 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 22:19:42 : Query success.
+08-01-2018 :: 22:19:42 : Có 2 dòng data
+08-01-2018 :: 22:19:42 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 22:19:42 : Query success.
+08-01-2018 :: 22:21:49 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 22:21:49 : Query success.
+08-01-2018 :: 22:21:49 : Có 0 dòng data
+08-01-2018 :: 22:21:49 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 22:21:49 : Query success.
+08-01-2018 :: 22:21:49 : Có 1 dòng data
+08-01-2018 :: 22:21:50 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 22:21:50 : Query success.
+08-01-2018 :: 22:21:50 : Có 2 dòng data
+08-01-2018 :: 22:21:50 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 22:21:50 : Query success.
+08-01-2018 :: 22:24:17 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 22:24:17 : Query success.
+08-01-2018 :: 22:24:17 : Có 0 dòng data
+08-01-2018 :: 22:24:17 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 22:24:17 : Query success.
+08-01-2018 :: 22:24:17 : Có 1 dòng data
+08-01-2018 :: 22:24:18 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 22:24:18 : Query success.
+08-01-2018 :: 22:24:18 : Có 2 dòng data
+08-01-2018 :: 22:24:18 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 22:24:18 : Query success.
+08-01-2018 :: 22:25:54 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 22:25:55 : Query success.
+08-01-2018 :: 22:25:55 : Có 0 dòng data
+08-01-2018 :: 22:25:55 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 22:25:55 : Query success.
+08-01-2018 :: 22:25:55 : Có 1 dòng data
+08-01-2018 :: 22:25:56 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 22:25:56 : Query success.
+08-01-2018 :: 22:25:56 : Có 2 dòng data
+08-01-2018 :: 22:25:56 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 22:25:56 : Query success.
+08-01-2018 :: 22:27:04 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 22:27:04 : Query success.
+08-01-2018 :: 22:27:04 : Có 0 dòng data
+08-01-2018 :: 22:27:04 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 22:27:04 : Query success.
+08-01-2018 :: 22:27:04 : Có 1 dòng data
+08-01-2018 :: 22:27:05 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 22:27:05 : Query success.
+08-01-2018 :: 22:27:05 : Có 2 dòng data
+08-01-2018 :: 22:27:05 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 22:27:05 : Query success.
+08-01-2018 :: 22:37:52 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 22:37:52 : Query success.
+08-01-2018 :: 22:37:52 : Có 0 dòng data
+08-01-2018 :: 22:37:52 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 22:37:52 : Query success.
+08-01-2018 :: 22:37:52 : Có 1 dòng data
+08-01-2018 :: 22:37:53 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 22:37:53 : Query success.
+08-01-2018 :: 22:37:53 : Có 2 dòng data
+08-01-2018 :: 22:37:53 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 22:37:53 : Query success.
+08-01-2018 :: 22:37:56 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC1' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 22:37:56 : Query success.
+08-01-2018 :: 22:37:56 : Result getNameProvider : Cyto
+08-01-2018 :: 22:37:56 : Query success.
+08-01-2018 :: 22:37:57 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 22:37:57 : Query success.
+08-01-2018 :: 22:37:57 : Result getNameProvider : A Lâm
+08-01-2018 :: 22:37:57 : Query success.
+08-01-2018 :: 22:37:59 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC1' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 22:37:59 : Query success.
+08-01-2018 :: 22:37:59 : Result getNameProvider : Cyto
+08-01-2018 :: 22:37:59 : Query success.
+08-01-2018 :: 22:38:00 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 22:38:00 : Query success.
+08-01-2018 :: 22:38:00 : Result getNameProvider : A Lâm
+08-01-2018 :: 22:38:00 : Query success.
+08-01-2018 :: 22:38:18 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 22:38:18 : Query success.
+08-01-2018 :: 22:38:18 : Có 0 dòng data
+08-01-2018 :: 22:38:18 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 22:38:18 : Query success.
+08-01-2018 :: 22:38:18 : Có 1 dòng data
+08-01-2018 :: 22:38:19 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 22:38:19 : Query success.
+08-01-2018 :: 22:38:19 : Có 2 dòng data
+08-01-2018 :: 22:38:19 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 22:38:19 : Query success.
+08-01-2018 :: 22:38:23 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC1' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 22:38:23 : Query success.
+08-01-2018 :: 22:38:23 : Result getNameProvider : Cyto
+08-01-2018 :: 22:38:23 : Query success.
+08-01-2018 :: 22:38:25 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 22:38:25 : Query success.
+08-01-2018 :: 22:38:25 : Result getNameProvider : A Lâm
+08-01-2018 :: 22:38:25 : Query success.
+08-01-2018 :: 22:38:26 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC1' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 22:38:26 : Query success.
+08-01-2018 :: 22:38:26 : Result getNameProvider : Cyto
+08-01-2018 :: 22:38:26 : Query success.
+08-01-2018 :: 22:38:27 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 22:38:27 : Query success.
+08-01-2018 :: 22:38:27 : Result getNameProvider : A Lâm
+08-01-2018 :: 22:38:27 : Query success.
+08-01-2018 :: 22:40:15 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 22:40:16 : Query success.
+08-01-2018 :: 22:40:16 : Có 0 dòng data
+08-01-2018 :: 22:40:16 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 22:40:16 : Query success.
+08-01-2018 :: 22:40:16 : Có 1 dòng data
+08-01-2018 :: 22:40:17 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 22:40:17 : Query success.
+08-01-2018 :: 22:40:17 : Có 2 dòng data
+08-01-2018 :: 22:40:17 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 22:40:17 : Query success.
+08-01-2018 :: 22:40:47 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 22:40:47 : Query success.
+08-01-2018 :: 22:40:47 : Có 0 dòng data
+08-01-2018 :: 22:40:47 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 22:40:47 : Query success.
+08-01-2018 :: 22:40:47 : Có 1 dòng data
+08-01-2018 :: 22:40:49 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 22:40:49 : Query success.
+08-01-2018 :: 22:40:49 : Có 2 dòng data
+08-01-2018 :: 22:40:49 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 22:40:49 : Query success.
+08-01-2018 :: 22:42:46 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 22:42:46 : Query success.
+08-01-2018 :: 22:42:46 : Có 0 dòng data
+08-01-2018 :: 22:42:46 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 22:42:46 : Query success.
+08-01-2018 :: 22:42:46 : Có 1 dòng data
+08-01-2018 :: 22:42:47 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 22:42:47 : Query success.
+08-01-2018 :: 22:42:47 : Có 2 dòng data
+08-01-2018 :: 22:42:47 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 22:42:47 : Query success.
+08-01-2018 :: 22:42:49 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 22:42:49 : Query success.
+08-01-2018 :: 22:42:49 : Có 2 dòng data
+08-01-2018 :: 22:42:49 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 22:42:49 : Query success.
+08-01-2018 :: 22:43:01 : Query getLstGuessProvider : select row_number()OVER(ORDER BY per.person_id asc) as STT, per.person_id, person_name, person_address, person_phone, (case when deal.num_deal IS NULL THEN 0 ELSE deal.num_deal END ) as num_deal, (case deal.date_deal when NULL THEN '' ELSE deal.date_deal END ) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson from tb_person per left outer join     (select count(bi.person_id) as num_deal     ,per.person_id     ,max(bill_date) as date_deal     From tb_person per left join tb_bill bi     on per.person_id = bi.person_id     where bi.del_fg = 0     group by per.person_id) deal on per.person_id = deal.person_id where per.del_fg = 0 group by deal.date_deal,deal.num_deal,per.person_id,person_name,person_address,person_phone,typeperson
+08-01-2018 :: 22:43:01 : Query success.
+08-01-2018 :: 22:43:01 : Có 6 dòng data
+08-01-2018 :: 22:43:02 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 22:43:02 : Query success.
+08-01-2018 :: 22:43:02 : Có 2 dòng data
+08-01-2018 :: 22:43:02 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 22:43:02 : Query success.
+08-01-2018 :: 22:46:56 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 22:46:57 : Query success.
+08-01-2018 :: 22:46:57 : Có 0 dòng data
+08-01-2018 :: 22:46:57 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 22:46:57 : Query success.
+08-01-2018 :: 22:46:57 : Có 1 dòng data
+08-01-2018 :: 22:46:58 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 22:46:58 : Query success.
+08-01-2018 :: 22:46:58 : Có 2 dòng data
+08-01-2018 :: 22:46:58 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 22:46:58 : Query success.
+08-01-2018 :: 22:48:37 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 22:48:37 : Query success.
+08-01-2018 :: 22:48:37 : Có 0 dòng data
+08-01-2018 :: 22:48:37 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 22:48:37 : Query success.
+08-01-2018 :: 22:48:37 : Có 1 dòng data
+08-01-2018 :: 22:48:38 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 22:48:38 : Query success.
+08-01-2018 :: 22:48:38 : Có 2 dòng data
+08-01-2018 :: 22:48:38 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 22:48:38 : Query success.
+08-01-2018 :: 22:48:43 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC1' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 22:48:43 : Query success.
+08-01-2018 :: 22:48:43 : Result getNameProvider : Cyto
+08-01-2018 :: 22:48:43 : Query success.
+08-01-2018 :: 22:48:44 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 22:48:44 : Query success.
+08-01-2018 :: 22:48:44 : Result getNameProvider : A Lâm
+08-01-2018 :: 22:48:44 : Query success.
+08-01-2018 :: 22:50:48 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 22:50:48 : Query success.
+08-01-2018 :: 22:50:48 : Có 0 dòng data
+08-01-2018 :: 22:50:48 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 22:50:48 : Query success.
+08-01-2018 :: 22:50:48 : Có 1 dòng data
+08-01-2018 :: 22:53:44 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 22:53:44 : Query success.
+08-01-2018 :: 22:53:44 : Có 2 dòng data
+08-01-2018 :: 22:53:44 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 22:53:44 : Query success.
+08-01-2018 :: 22:53:47 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC1' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 22:53:47 : Query success.
+08-01-2018 :: 22:53:47 : Result getNameProvider : Cyto
+08-01-2018 :: 22:53:47 : Query success.
+08-01-2018 :: 22:53:50 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 22:53:50 : Query success.
+08-01-2018 :: 22:53:50 : Result getNameProvider : A Lâm
+08-01-2018 :: 22:53:50 : Query success.
+08-01-2018 :: 22:53:51 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC1' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 22:53:51 : Query success.
+08-01-2018 :: 22:53:51 : Result getNameProvider : Cyto
+08-01-2018 :: 22:53:51 : Query success.
+08-01-2018 :: 22:53:56 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC1' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 22:53:56 : Query success.
+08-01-2018 :: 22:53:56 : Result getNameProvider : Cyto
+08-01-2018 :: 22:53:56 : Query success.
+08-01-2018 :: 22:54:02 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 22:54:02 : Query success.
+08-01-2018 :: 22:54:02 : Result getNameProvider : A Lâm
+08-01-2018 :: 22:54:02 : Query success.
+08-01-2018 :: 23:15:29 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 23:15:29 : Query success.
+08-01-2018 :: 23:15:29 : Có 0 dòng data
+08-01-2018 :: 23:15:29 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 23:15:29 : Query success.
+08-01-2018 :: 23:15:29 : Có 1 dòng data
+08-01-2018 :: 23:15:31 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 23:15:31 : Query success.
+08-01-2018 :: 23:15:31 : Có 2 dòng data
+08-01-2018 :: 23:15:31 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 23:15:31 : Query success.
+08-01-2018 :: 23:15:35 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:15:35 : Query success.
+08-01-2018 :: 23:15:35 : Result getNameProvider : A Lâm
+08-01-2018 :: 23:15:35 : Query success.
+08-01-2018 :: 23:15:47 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:15:47 : Query success.
+08-01-2018 :: 23:15:47 : Result getNameProvider : A Lâm
+08-01-2018 :: 23:15:47 : Query success.
+08-01-2018 :: 23:18:27 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 23:18:28 : Query success.
+08-01-2018 :: 23:18:28 : Có 0 dòng data
+08-01-2018 :: 23:18:28 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 23:18:28 : Query success.
+08-01-2018 :: 23:18:28 : Có 1 dòng data
+08-01-2018 :: 23:18:29 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 23:18:29 : Query success.
+08-01-2018 :: 23:18:29 : Có 2 dòng data
+08-01-2018 :: 23:18:29 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 23:18:29 : Query success.
+08-01-2018 :: 23:18:30 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:18:30 : Query success.
+08-01-2018 :: 23:18:30 : Result getNameProvider : A Lâm
+08-01-2018 :: 23:18:30 : Query success.
+08-01-2018 :: 23:18:30 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = '' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:18:30 : Query success.
+08-01-2018 :: 23:18:30 : Result getNameProvider : 
+08-01-2018 :: 23:18:30 : Query success.
+08-01-2018 :: 23:18:34 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:18:34 : Query success.
+08-01-2018 :: 23:18:34 : Result getNameProvider : A Lâm
+08-01-2018 :: 23:18:34 : Query success.
+08-01-2018 :: 23:18:34 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = '' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:18:34 : Query success.
+08-01-2018 :: 23:18:34 : Result getNameProvider : 
+08-01-2018 :: 23:18:34 : Query success.
+08-01-2018 :: 23:18:35 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:18:35 : Query success.
+08-01-2018 :: 23:18:35 : Result getNameProvider : A Lâm
+08-01-2018 :: 23:18:35 : Query success.
+08-01-2018 :: 23:18:36 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = '' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:18:36 : Query success.
+08-01-2018 :: 23:18:36 : Result getNameProvider : 
+08-01-2018 :: 23:18:36 : Query success.
+08-01-2018 :: 23:22:03 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 23:22:03 : Query success.
+08-01-2018 :: 23:22:03 : Có 0 dòng data
+08-01-2018 :: 23:22:03 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 23:22:03 : Query success.
+08-01-2018 :: 23:22:03 : Có 1 dòng data
+08-01-2018 :: 23:22:04 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 23:22:04 : Query success.
+08-01-2018 :: 23:22:04 : Có 2 dòng data
+08-01-2018 :: 23:22:04 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 23:22:04 : Query success.
+08-01-2018 :: 23:22:05 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:22:05 : Query success.
+08-01-2018 :: 23:22:05 : Result getNameProvider : A Lâm
+08-01-2018 :: 23:22:05 : Query success.
+08-01-2018 :: 23:22:06 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = '' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:22:06 : Query success.
+08-01-2018 :: 23:22:06 : Result getNameProvider : 
+08-01-2018 :: 23:22:06 : Query success.
+08-01-2018 :: 23:22:08 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:22:08 : Query success.
+08-01-2018 :: 23:22:08 : Result getNameProvider : A Lâm
+08-01-2018 :: 23:22:08 : Query success.
+08-01-2018 :: 23:22:08 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = '' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:22:08 : Query success.
+08-01-2018 :: 23:22:08 : Result getNameProvider : 
+08-01-2018 :: 23:22:08 : Query success.
+08-01-2018 :: 23:22:09 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:22:09 : Query success.
+08-01-2018 :: 23:22:09 : Result getNameProvider : A Lâm
+08-01-2018 :: 23:22:09 : Query success.
+08-01-2018 :: 23:22:09 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = '' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:22:09 : Query success.
+08-01-2018 :: 23:22:09 : Result getNameProvider : 
+08-01-2018 :: 23:22:09 : Query success.
+08-01-2018 :: 23:22:10 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:22:10 : Query success.
+08-01-2018 :: 23:22:10 : Result getNameProvider : A Lâm
+08-01-2018 :: 23:22:10 : Query success.
+08-01-2018 :: 23:22:10 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = '' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:22:10 : Query success.
+08-01-2018 :: 23:22:10 : Result getNameProvider : 
+08-01-2018 :: 23:22:11 : Query success.
+08-01-2018 :: 23:22:12 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:22:12 : Query success.
+08-01-2018 :: 23:22:12 : Result getNameProvider : A Lâm
+08-01-2018 :: 23:22:12 : Query success.
+08-01-2018 :: 23:22:38 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 23:22:38 : Query success.
+08-01-2018 :: 23:22:38 : Có 0 dòng data
+08-01-2018 :: 23:22:38 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 23:22:38 : Query success.
+08-01-2018 :: 23:22:38 : Có 1 dòng data
+08-01-2018 :: 23:22:48 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 23:22:48 : Query success.
+08-01-2018 :: 23:22:48 : Có 2 dòng data
+08-01-2018 :: 23:22:48 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 23:22:48 : Query success.
+08-01-2018 :: 23:22:52 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = '' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:22:52 : Query success.
+08-01-2018 :: 23:22:52 : Result getNameProvider : 
+08-01-2018 :: 23:22:52 : Query success.
+08-01-2018 :: 23:22:53 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:22:53 : Query success.
+08-01-2018 :: 23:22:53 : Result getNameProvider : A Lâm
+08-01-2018 :: 23:22:53 : Query success.
+08-01-2018 :: 23:22:53 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = '' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:22:53 : Query success.
+08-01-2018 :: 23:22:53 : Result getNameProvider : 
+08-01-2018 :: 23:22:53 : Query success.
+08-01-2018 :: 23:22:54 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:22:54 : Query success.
+08-01-2018 :: 23:22:54 : Result getNameProvider : A Lâm
+08-01-2018 :: 23:22:54 : Query success.
+08-01-2018 :: 23:23:05 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = '' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:23:05 : Query success.
+08-01-2018 :: 23:23:05 : Result getNameProvider : 
+08-01-2018 :: 23:23:05 : Query success.
+08-01-2018 :: 23:23:05 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = '' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:23:05 : Query success.
+08-01-2018 :: 23:23:05 : Result getNameProvider : 
+08-01-2018 :: 23:23:05 : Query success.
+08-01-2018 :: 23:23:06 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:23:06 : Query success.
+08-01-2018 :: 23:23:06 : Result getNameProvider : A Lâm
+08-01-2018 :: 23:23:06 : Query success.
+08-01-2018 :: 23:23:07 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:23:07 : Query success.
+08-01-2018 :: 23:23:07 : Result getNameProvider : A Lâm
+08-01-2018 :: 23:23:07 : Query success.
+08-01-2018 :: 23:23:11 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = '' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:23:11 : Query success.
+08-01-2018 :: 23:23:11 : Result getNameProvider : 
+08-01-2018 :: 23:23:11 : Query success.
+08-01-2018 :: 23:23:13 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:23:13 : Query success.
+08-01-2018 :: 23:23:13 : Result getNameProvider : A Lâm
+08-01-2018 :: 23:23:13 : Query success.
+08-01-2018 :: 23:23:13 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = '' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:23:13 : Query success.
+08-01-2018 :: 23:23:13 : Result getNameProvider : 
+08-01-2018 :: 23:23:13 : Query success.
+08-01-2018 :: 23:23:14 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:23:14 : Query success.
+08-01-2018 :: 23:23:14 : Result getNameProvider : A Lâm
+08-01-2018 :: 23:23:14 : Query success.
+08-01-2018 :: 23:23:21 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = '' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:23:21 : Query success.
+08-01-2018 :: 23:23:21 : Result getNameProvider : 
+08-01-2018 :: 23:23:21 : Query success.
+08-01-2018 :: 23:23:21 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:23:21 : Query success.
+08-01-2018 :: 23:23:21 : Result getNameProvider : A Lâm
+08-01-2018 :: 23:23:21 : Query success.
+08-01-2018 :: 23:23:24 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = '' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:23:24 : Query success.
+08-01-2018 :: 23:23:24 : Result getNameProvider : 
+08-01-2018 :: 23:23:24 : Query success.
+08-01-2018 :: 23:23:24 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC2' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:23:24 : Query success.
+08-01-2018 :: 23:23:24 : Result getNameProvider : A Lâm
+08-01-2018 :: 23:23:24 : Query success.
+08-01-2018 :: 23:23:25 : Query getNameProvider : SELECT person_name FROM tb_person Where person_id = 'NCC1' and typeperson = 2 and del_fg = 0
+08-01-2018 :: 23:23:25 : Query success.
+08-01-2018 :: 23:23:25 : Result getNameProvider : Cyto
+08-01-2018 :: 23:23:25 : Query success.
+08-01-2018 :: 23:59:16 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+08-01-2018 :: 23:59:16 : Query success.
+08-01-2018 :: 23:59:16 : Có 0 dòng data
+08-01-2018 :: 23:59:16 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 23:59:16 : Query success.
+08-01-2018 :: 23:59:16 : Có 1 dòng data
+08-01-2018 :: 23:59:18 : Query getAllBillNhapHang : select row_number()OVER (ORDER BY bill_date desc ) as STT,bill_id,bill_date,person_id,person_name,note,typebill,del_fg from tb_bill  where typebill = 1  and del_fg = 0 order by bill_date desc 
+08-01-2018 :: 23:59:18 : Query success.
+08-01-2018 :: 23:59:18 : Có 2 dòng data
+08-01-2018 :: 23:59:18 : Query getLstProvider :   Select (case person_id when '111' then N'<Trống>' else person_id end) as person_id , person_name, person_address, person_phone, typeperson from tb_person where typeperson = 2 and   del_fg = 0 
+08-01-2018 :: 23:59:18 : Query success.
+08-01-2018 :: 23:59:18 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,(case pro.category_id when NULL then '' else (select category_name from tb_category cate where cate.category_id = pro.category_id ) end ) as category_name ,(case pro.unit_id when NULL then '' else (select unit_name from tb_unit uni where uni.unit_id = pro.unit_id ) end ) as unit_name ,brandname,size,photo,del_fg from tb_product pro where del_fg = 0
+08-01-2018 :: 23:59:18 : Query success.
+08-01-2018 :: 23:59:18 : Có 1 dòng data

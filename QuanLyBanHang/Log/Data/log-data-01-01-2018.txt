@@ -1,0 +1,640 @@
+01-01-2018 :: 13:25:02 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 13:25:03 : Query success.
+01-01-2018 :: 13:25:03 : Có 0 dòng data
+01-01-2018 :: 13:25:03 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 13:25:03 : Query success.
+01-01-2018 :: 13:25:03 : Có 2 dòng data
+01-01-2018 :: 13:25:07 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-02' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 13:25:07 : Query success.
+01-01-2018 :: 13:25:07 : Có 0 dòng data
+01-01-2018 :: 13:25:07 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-03' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 13:25:07 : Query success.
+01-01-2018 :: 13:25:07 : Có 0 dòng data
+01-01-2018 :: 13:25:08 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-10' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 13:25:08 : Query success.
+01-01-2018 :: 13:25:08 : Có 0 dòng data
+01-01-2018 :: 13:25:08 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-24' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 13:25:08 : Query success.
+01-01-2018 :: 13:25:08 : Có 0 dòng data
+01-01-2018 :: 13:25:09 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 13:25:09 : Query success.
+01-01-2018 :: 13:25:09 : Có 0 dòng data
+01-01-2018 :: 13:25:18 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-31' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 13:25:18 : Query success.
+01-01-2018 :: 13:25:19 : Có 0 dòng data
+01-01-2018 :: 13:25:20 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 13:25:21 : Query success.
+01-01-2018 :: 13:25:21 : Có 2 dòng data
+01-01-2018 :: 13:25:23 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-29' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 13:25:23 : Query success.
+01-01-2018 :: 13:25:23 : Có 0 dòng data
+01-01-2018 :: 13:25:24 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 13:25:24 : Query success.
+01-01-2018 :: 13:25:24 : Có 2 dòng data
+01-01-2018 :: 13:25:25 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 13:25:25 : Query success.
+01-01-2018 :: 13:25:25 : Có 0 dòng data
+01-01-2018 :: 13:42:35 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 13:42:35 : Query success.
+01-01-2018 :: 13:42:35 : Có 0 dòng data
+01-01-2018 :: 13:42:35 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 13:42:35 : Query success.
+01-01-2018 :: 13:42:35 : Có 2 dòng data
+01-01-2018 :: 13:48:52 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 13:48:52 : Query success.
+01-01-2018 :: 13:48:52 : Có 0 dòng data
+01-01-2018 :: 13:48:52 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 13:48:52 : Query success.
+01-01-2018 :: 13:48:52 : Có 2 dòng data
+01-01-2018 :: 13:59:30 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 13:59:30 : Query success.
+01-01-2018 :: 13:59:30 : Có 0 dòng data
+01-01-2018 :: 13:59:30 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 13:59:30 : Query success.
+01-01-2018 :: 13:59:30 : Có 2 dòng data
+01-01-2018 :: 13:59:46 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 13:59:46 : Query success.
+01-01-2018 :: 13:59:46 : Có 0 dòng data
+01-01-2018 :: 13:59:46 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 13:59:46 : Query success.
+01-01-2018 :: 13:59:46 : Có 2 dòng data
+01-01-2018 :: 14:02:39 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 14:02:40 : Query success.
+01-01-2018 :: 14:02:40 : Có 0 dòng data
+01-01-2018 :: 14:02:40 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 14:02:40 : Query success.
+01-01-2018 :: 14:02:40 : Có 2 dòng data
+01-01-2018 :: 14:43:25 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 14:43:25 : Query success.
+01-01-2018 :: 14:43:25 : Có 0 dòng data
+01-01-2018 :: 14:43:25 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 14:43:25 : Query success.
+01-01-2018 :: 14:43:25 : Có 2 dòng data
+01-01-2018 :: 14:43:25 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 14:43:25 : Query success.
+01-01-2018 :: 14:43:25 : Có 3 dòng data
+01-01-2018 :: 14:46:23 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 14:46:23 : Query success.
+01-01-2018 :: 14:46:23 : Có 0 dòng data
+01-01-2018 :: 14:46:23 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 14:46:23 : Query success.
+01-01-2018 :: 14:46:23 : Có 2 dòng data
+01-01-2018 :: 14:46:23 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 14:46:23 : Query success.
+01-01-2018 :: 14:46:23 : Có 3 dòng data
+01-01-2018 :: 14:46:40 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 14:46:41 : Query success.
+01-01-2018 :: 14:46:41 : Có 0 dòng data
+01-01-2018 :: 14:46:41 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 14:46:41 : Query success.
+01-01-2018 :: 14:46:41 : Có 2 dòng data
+01-01-2018 :: 14:46:41 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 14:46:41 : Query success.
+01-01-2018 :: 14:46:41 : Có 3 dòng data
+01-01-2018 :: 14:48:35 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 14:48:36 : Query success.
+01-01-2018 :: 14:48:36 : Có 0 dòng data
+01-01-2018 :: 14:48:36 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 14:48:36 : Query success.
+01-01-2018 :: 14:48:36 : Có 2 dòng data
+01-01-2018 :: 14:48:36 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 14:48:36 : Query success.
+01-01-2018 :: 14:48:36 : Có 3 dòng data
+01-01-2018 :: 14:53:41 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 14:53:41 : Query success.
+01-01-2018 :: 14:53:41 : Có 0 dòng data
+01-01-2018 :: 14:53:41 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 14:53:41 : Query success.
+01-01-2018 :: 14:53:41 : Có 2 dòng data
+01-01-2018 :: 14:53:41 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 14:53:41 : Query success.
+01-01-2018 :: 14:53:41 : Có 3 dòng data
+01-01-2018 :: 14:53:44 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 14:53:44 : Query success.
+01-01-2018 :: 14:53:44 : Có 3 dòng data
+01-01-2018 :: 14:53:47 : Query getLstGuessProviderByType : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and typeperson = 1   and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 14:53:47 : Query success.
+01-01-2018 :: 14:53:47 : Có 2 dòng data
+01-01-2018 :: 14:53:50 : Query getLstGuessProviderByType : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and typeperson = 2   and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 14:53:50 : Query success.
+01-01-2018 :: 14:53:50 : Có 1 dòng data
+01-01-2018 :: 14:56:31 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 14:56:31 : Query success.
+01-01-2018 :: 14:56:31 : Có 0 dòng data
+01-01-2018 :: 14:56:31 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 14:56:31 : Query success.
+01-01-2018 :: 14:56:31 : Có 2 dòng data
+01-01-2018 :: 14:56:31 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 14:56:31 : Query success.
+01-01-2018 :: 14:56:31 : Có 3 dòng data
+01-01-2018 :: 14:56:34 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 14:56:34 : Query success.
+01-01-2018 :: 14:56:34 : Có 3 dòng data
+01-01-2018 :: 14:56:36 : Query getLstGuessProviderByType : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and typeperson = 2   and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 14:56:36 : Query success.
+01-01-2018 :: 14:56:36 : Có 1 dòng data
+01-01-2018 :: 14:56:38 : Query getLstGuessProviderByType : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and typeperson = 1   and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 14:56:38 : Query success.
+01-01-2018 :: 14:56:38 : Có 2 dòng data
+01-01-2018 :: 15:34:49 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 15:34:49 : Query success.
+01-01-2018 :: 15:34:49 : Có 0 dòng data
+01-01-2018 :: 15:34:49 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 15:34:49 : Query success.
+01-01-2018 :: 15:34:49 : Có 2 dòng data
+01-01-2018 :: 15:34:49 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 15:34:49 : Query success.
+01-01-2018 :: 15:34:49 : Có 3 dòng data
+01-01-2018 :: 15:34:54 : Query getLstGuessProviderByType : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and typeperson = 1   and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 15:34:54 : Query success.
+01-01-2018 :: 15:34:54 : Có 2 dòng data
+01-01-2018 :: 15:34:56 : Query getLstGuessProviderByType : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and typeperson = 2   and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 15:34:56 : Query success.
+01-01-2018 :: 15:34:56 : Có 1 dòng data
+01-01-2018 :: 15:34:58 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 15:34:58 : Query success.
+01-01-2018 :: 15:34:58 : Có 3 dòng data
+01-01-2018 :: 15:35:05 : Query getLstGuessProviderByKey : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and (bi.person_id like '%A%'   OR person_name like '%A%'   OR person_phone = 'A'   OR person_address like '%A%')  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 15:35:05 : Query success.
+01-01-2018 :: 15:35:05 : Có 3 dòng data
+01-01-2018 :: 15:35:06 : Query getLstGuessProviderByKey : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and (bi.person_id like '%A%'   OR person_name like '%A%'   OR person_phone = 'A'   OR person_address like '%A%')  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 15:35:06 : Query success.
+01-01-2018 :: 15:35:06 : Có 3 dòng data
+01-01-2018 :: 15:35:06 : Query getLstGuessProviderByKey : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and (bi.person_id like '%A%'   OR person_name like '%A%'   OR person_phone = 'A'   OR person_address like '%A%')  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 15:35:06 : Query success.
+01-01-2018 :: 15:35:06 : Có 3 dòng data
+01-01-2018 :: 15:35:07 : Query getLstGuessProviderByKey : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and (bi.person_id like '%A%'   OR person_name like '%A%'   OR person_phone = 'A'   OR person_address like '%A%')  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 15:35:07 : Query success.
+01-01-2018 :: 15:35:07 : Có 3 dòng data
+01-01-2018 :: 15:35:07 : Query getLstGuessProviderByKey : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and (bi.person_id like '%A%'   OR person_name like '%A%'   OR person_phone = 'A'   OR person_address like '%A%')  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 15:35:07 : Query success.
+01-01-2018 :: 15:35:07 : Có 3 dòng data
+01-01-2018 :: 15:35:17 : Query getLstGuessProviderByKey : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and (bi.person_id like '%A Khanh%'   OR person_name like '%A Khanh%'   OR person_phone = 'A Khanh'   OR person_address like '%A Khanh%')  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 15:35:17 : Query success.
+01-01-2018 :: 15:35:17 : Có 0 dòng data
+01-01-2018 :: 15:35:25 : Query getLstGuessProviderByKey : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and (bi.person_id like '%A Khánh%'   OR person_name like '%A Khánh%'   OR person_phone = 'A Khánh'   OR person_address like '%A Khánh%')  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 15:35:25 : Query success.
+01-01-2018 :: 15:35:25 : Có 1 dòng data
+01-01-2018 :: 15:35:32 : Query getLstGuessProviderByKey : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and (bi.person_id like '%0123456789%'   OR person_name like '%0123456789%'   OR person_phone = '0123456789'   OR person_address like '%0123456789%')  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 15:35:32 : Query success.
+01-01-2018 :: 15:35:32 : Có 3 dòng data
+01-01-2018 :: 15:35:37 : Query getLstGuessProviderByKey : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and (bi.person_id like '%KH1%'   OR person_name like '%KH1%'   OR person_phone = 'KH1'   OR person_address like '%KH1%')  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 15:35:37 : Query success.
+01-01-2018 :: 15:35:37 : Có 1 dòng data
+01-01-2018 :: 15:35:55 : Query getLstGuessProviderByKeyType : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and (bi.person_id like '%0123456789%'   OR person_name like '%0123456789%'   OR person_phone = '0123456789'   OR person_address like '%0123456789%')  and typeperson = 1   and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 15:35:55 : Query success.
+01-01-2018 :: 15:35:55 : Có 2 dòng data
+01-01-2018 :: 15:35:58 : Query getLstGuessProviderByKey : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and (bi.person_id like '%0123456789%'   OR person_name like '%0123456789%'   OR person_phone = '0123456789'   OR person_address like '%0123456789%')  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 15:35:58 : Query success.
+01-01-2018 :: 15:35:58 : Có 3 dòng data
+01-01-2018 :: 15:36:02 : Query getLstGuessProviderByKeyType : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and (bi.person_id like '%0123456789%'   OR person_name like '%0123456789%'   OR person_phone = '0123456789'   OR person_address like '%0123456789%')  and typeperson = 1   and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 15:36:02 : Query success.
+01-01-2018 :: 15:36:02 : Có 2 dòng data
+01-01-2018 :: 15:36:04 : Query getLstGuessProviderByKeyType : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and (bi.person_id like '%0123456789%'   OR person_name like '%0123456789%'   OR person_phone = '0123456789'   OR person_address like '%0123456789%')  and typeperson = 2   and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 15:36:04 : Query success.
+01-01-2018 :: 15:36:05 : Có 1 dòng data
+01-01-2018 :: 15:38:11 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 15:38:11 : Query success.
+01-01-2018 :: 15:38:11 : Có 0 dòng data
+01-01-2018 :: 15:38:11 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 15:38:11 : Query success.
+01-01-2018 :: 15:38:11 : Có 2 dòng data
+01-01-2018 :: 15:38:11 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 15:38:11 : Query success.
+01-01-2018 :: 15:38:11 : Có 3 dòng data
+01-01-2018 :: 15:38:25 : Query getLstGuessProviderByKeyType : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and (bi.person_id like '%A Lâm%'   OR person_name like '%A Lâm%'   OR person_phone = 'A Lâm'   OR person_address like '%A Lâm%')  and typeperson = 1   and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 15:38:26 : Query success.
+01-01-2018 :: 15:38:26 : Có 0 dòng data
+01-01-2018 :: 15:38:30 : Query getLstGuessProviderByType : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and typeperson = 1   and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 15:38:30 : Query success.
+01-01-2018 :: 15:38:30 : Có 2 dòng data
+01-01-2018 :: 16:07:24 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 16:07:24 : Query success.
+01-01-2018 :: 16:07:24 : Có 0 dòng data
+01-01-2018 :: 16:07:24 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 16:07:24 : Query success.
+01-01-2018 :: 16:07:24 : Có 2 dòng data
+01-01-2018 :: 16:07:24 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 16:07:24 : Query success.
+01-01-2018 :: 16:07:24 : Có 3 dòng data
+01-01-2018 :: 16:08:55 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 16:08:55 : Query success.
+01-01-2018 :: 16:08:55 : Có 0 dòng data
+01-01-2018 :: 16:08:55 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 16:08:55 : Query success.
+01-01-2018 :: 16:08:55 : Có 2 dòng data
+01-01-2018 :: 16:08:55 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 16:08:55 : Query success.
+01-01-2018 :: 16:08:55 : Có 3 dòng data
+01-01-2018 :: 16:16:17 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 16:16:17 : Query success.
+01-01-2018 :: 16:16:17 : Có 0 dòng data
+01-01-2018 :: 16:16:17 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 16:16:17 : Query success.
+01-01-2018 :: 16:16:17 : Có 2 dòng data
+01-01-2018 :: 16:16:17 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 16:16:17 : Query success.
+01-01-2018 :: 16:16:17 : Có 3 dòng data
+01-01-2018 :: 16:20:09 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 16:20:10 : Query success.
+01-01-2018 :: 16:20:10 : Có 0 dòng data
+01-01-2018 :: 16:20:10 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 16:20:10 : Query success.
+01-01-2018 :: 16:20:10 : Có 2 dòng data
+01-01-2018 :: 16:20:10 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 16:20:10 : Query success.
+01-01-2018 :: 16:20:10 : Có 3 dòng data
+01-01-2018 :: 16:30:27 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 16:30:27 : Query success.
+01-01-2018 :: 16:30:27 : Có 0 dòng data
+01-01-2018 :: 16:30:27 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 16:30:27 : Query success.
+01-01-2018 :: 16:30:27 : Có 2 dòng data
+01-01-2018 :: 16:30:27 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 16:30:27 : Query success.
+01-01-2018 :: 16:30:27 : Có 3 dòng data
+01-01-2018 :: 16:37:44 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 16:37:44 : Query success.
+01-01-2018 :: 16:37:44 : Có 0 dòng data
+01-01-2018 :: 16:37:44 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 16:37:44 : Query success.
+01-01-2018 :: 16:37:44 : Có 2 dòng data
+01-01-2018 :: 16:37:44 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 16:37:44 : Query success.
+01-01-2018 :: 16:37:44 : Có 3 dòng data
+01-01-2018 :: 16:38:06 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-31' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 16:38:06 : Query success.
+01-01-2018 :: 16:38:06 : Có 0 dòng data
+01-01-2018 :: 16:38:08 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 16:38:08 : Query success.
+01-01-2018 :: 16:38:08 : Có 2 dòng data
+01-01-2018 :: 16:38:10 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 16:38:10 : Query success.
+01-01-2018 :: 16:38:10 : Có 0 dòng data
+01-01-2018 :: 16:39:34 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 16:39:34 : Query success.
+01-01-2018 :: 16:39:34 : Có 0 dòng data
+01-01-2018 :: 16:39:34 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 16:39:34 : Query success.
+01-01-2018 :: 16:39:34 : Có 2 dòng data
+01-01-2018 :: 16:39:34 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 16:39:34 : Query success.
+01-01-2018 :: 16:39:34 : Có 3 dòng data
+01-01-2018 :: 16:39:41 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 16:39:41 : Query success.
+01-01-2018 :: 16:39:41 : Có 3 dòng data
+01-01-2018 :: 16:39:46 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 16:39:46 : Query success.
+01-01-2018 :: 16:39:46 : Có 3 dòng data
+01-01-2018 :: 16:39:47 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 16:39:47 : Query success.
+01-01-2018 :: 16:39:47 : Có 3 dòng data
+01-01-2018 :: 16:39:47 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 16:39:47 : Query success.
+01-01-2018 :: 16:39:47 : Có 3 dòng data
+01-01-2018 :: 16:40:21 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 16:40:22 : Query success.
+01-01-2018 :: 16:40:22 : Có 0 dòng data
+01-01-2018 :: 16:40:22 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 16:40:22 : Query success.
+01-01-2018 :: 16:40:22 : Có 2 dòng data
+01-01-2018 :: 16:40:22 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 16:40:22 : Query success.
+01-01-2018 :: 16:40:22 : Có 3 dòng data
+01-01-2018 :: 16:42:31 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 16:42:31 : Query success.
+01-01-2018 :: 16:42:31 : Có 0 dòng data
+01-01-2018 :: 16:42:31 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 16:42:31 : Query success.
+01-01-2018 :: 16:42:31 : Có 2 dòng data
+01-01-2018 :: 16:42:31 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 16:42:31 : Query success.
+01-01-2018 :: 16:42:31 : Có 3 dòng data
+01-01-2018 :: 16:55:10 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 16:55:10 : Query success.
+01-01-2018 :: 16:55:10 : Có 0 dòng data
+01-01-2018 :: 16:55:10 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 16:55:10 : Query success.
+01-01-2018 :: 16:55:10 : Có 2 dòng data
+01-01-2018 :: 16:55:10 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 16:55:10 : Query success.
+01-01-2018 :: 16:55:10 : Có 3 dòng data
+01-01-2018 :: 17:31:07 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 17:31:07 : Query success.
+01-01-2018 :: 17:31:07 : Table
+01-01-2018 :: 17:31:07 : Có 0 dòng data
+01-01-2018 :: 17:31:07 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 17:31:07 : Query success.
+01-01-2018 :: 17:31:07 : Table
+01-01-2018 :: 17:31:07 : Có 2 dòng data
+01-01-2018 :: 17:35:49 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 17:35:49 : Query success.
+01-01-2018 :: 17:35:49 : Có 0 dòng data
+01-01-2018 :: 17:35:49 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 17:35:49 : Query success.
+01-01-2018 :: 17:35:49 : Có 2 dòng data
+01-01-2018 :: 18:50:26 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 18:50:26 : Query success.
+01-01-2018 :: 18:50:26 : Có 0 dòng data
+01-01-2018 :: 18:50:26 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 18:50:26 : Query success.
+01-01-2018 :: 18:50:26 : Có 2 dòng data
+01-01-2018 :: 18:50:28 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 18:50:28 : Query success.
+01-01-2018 :: 18:50:28 : Có 3 dòng data
+01-01-2018 :: 18:55:21 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 18:55:21 : Query success.
+01-01-2018 :: 18:55:21 : Có 0 dòng data
+01-01-2018 :: 18:55:21 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 18:55:21 : Query success.
+01-01-2018 :: 18:55:21 : Có 2 dòng data
+01-01-2018 :: 18:55:22 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 18:55:22 : Query success.
+01-01-2018 :: 18:55:22 : Có 3 dòng data
+01-01-2018 :: 19:08:23 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 19:08:24 : Query success.
+01-01-2018 :: 19:08:24 : Có 0 dòng data
+01-01-2018 :: 19:08:24 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 19:08:24 : Query success.
+01-01-2018 :: 19:08:24 : Có 2 dòng data
+01-01-2018 :: 19:08:25 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 19:08:25 : Query success.
+01-01-2018 :: 19:08:25 : Có 3 dòng data
+01-01-2018 :: 19:08:29 : Query delGuessProviderById : UPDATE tb_Person SET del_fg = 1 where person_id = 'KH1'
+01-01-2018 :: 19:08:29 : Query success.
+01-01-2018 :: 19:08:29 : Result database : Đã update del_fg của ID :KH1 thành 1
+01-01-2018 :: 19:08:31 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 19:08:31 : Query success.
+01-01-2018 :: 19:08:31 : Có 2 dòng data
+01-01-2018 :: 19:08:37 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 19:08:37 : Query success.
+01-01-2018 :: 19:08:37 : Có 0 dòng data
+01-01-2018 :: 19:08:37 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 19:08:37 : Query success.
+01-01-2018 :: 19:08:37 : Có 2 dòng data
+01-01-2018 :: 19:08:37 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 19:08:37 : Query success.
+01-01-2018 :: 19:08:37 : Có 2 dòng data
+01-01-2018 :: 19:15:53 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 19:15:53 : Query success.
+01-01-2018 :: 19:15:53 : Có 0 dòng data
+01-01-2018 :: 19:15:53 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 19:15:53 : Query success.
+01-01-2018 :: 19:15:53 : Có 2 dòng data
+01-01-2018 :: 19:15:54 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 19:15:54 : Query success.
+01-01-2018 :: 19:15:54 : Có 3 dòng data
+01-01-2018 :: 19:17:28 : Query delGuessProviderById : UPDATE tb_Person SET del_fg = 1 where person_id = 'NCC2'
+01-01-2018 :: 19:17:28 : Query success.
+01-01-2018 :: 19:17:28 : Result database : Đã update del_fg của ID :NCC2 thành 1
+01-01-2018 :: 19:17:29 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 19:17:29 : Query success.
+01-01-2018 :: 19:17:29 : Có 2 dòng data
+01-01-2018 :: 19:17:33 : Query delGuessProviderById : UPDATE tb_Person SET del_fg = 1 where person_id = 'KH2'
+01-01-2018 :: 19:17:33 : Query success.
+01-01-2018 :: 19:17:33 : Result database : Đã update del_fg của ID :KH2 thành 1
+01-01-2018 :: 19:17:34 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 19:17:34 : Query success.
+01-01-2018 :: 19:17:34 : Có 1 dòng data
+01-01-2018 :: 19:17:36 : Query delGuessProviderById : UPDATE tb_Person SET del_fg = 1 where person_id = 'KH1'
+01-01-2018 :: 19:17:36 : Query success.
+01-01-2018 :: 19:17:36 : Result database : Đã update del_fg của ID :KH1 thành 1
+01-01-2018 :: 19:17:37 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 19:17:37 : Query success.
+01-01-2018 :: 19:17:37 : Có 0 dòng data
+01-01-2018 :: 19:17:38 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 19:17:38 : Query success.
+01-01-2018 :: 19:17:38 : Có 0 dòng data
+01-01-2018 :: 19:17:38 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 19:17:38 : Query success.
+01-01-2018 :: 19:17:38 : Có 2 dòng data
+01-01-2018 :: 19:17:39 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 19:17:39 : Query success.
+01-01-2018 :: 19:17:39 : Có 0 dòng data
+01-01-2018 :: 19:17:44 : Query getLstGuessProviderByType : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and typeperson = 1   and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 19:17:44 : Query success.
+01-01-2018 :: 19:17:44 : Có 0 dòng data
+01-01-2018 :: 19:17:45 : Query getLstGuessProviderByType : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and typeperson = 2   and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 19:17:45 : Query success.
+01-01-2018 :: 19:17:45 : Có 0 dòng data
+01-01-2018 :: 19:17:46 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 19:17:46 : Query success.
+01-01-2018 :: 19:17:46 : Có 0 dòng data
+01-01-2018 :: 19:17:47 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 19:17:47 : Query success.
+01-01-2018 :: 19:17:47 : Có 0 dòng data
+01-01-2018 :: 19:34:30 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 19:34:30 : Query success.
+01-01-2018 :: 19:34:30 : Có 0 dòng data
+01-01-2018 :: 19:34:30 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 19:34:30 : Query success.
+01-01-2018 :: 19:34:30 : Có 2 dòng data
+01-01-2018 :: 19:34:31 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 19:34:31 : Query success.
+01-01-2018 :: 19:34:31 : Có 3 dòng data
+01-01-2018 :: 19:43:08 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 19:43:08 : Query success.
+01-01-2018 :: 19:43:08 : Có 0 dòng data
+01-01-2018 :: 19:43:08 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 19:43:08 : Query success.
+01-01-2018 :: 19:43:08 : Có 2 dòng data
+01-01-2018 :: 19:43:11 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 19:43:11 : Query success.
+01-01-2018 :: 19:43:11 : Có 3 dòng data
+01-01-2018 :: 20:11:07 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 20:11:07 : Query success.
+01-01-2018 :: 20:11:07 : Có 0 dòng data
+01-01-2018 :: 20:11:07 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 20:11:07 : Query success.
+01-01-2018 :: 20:11:07 : Có 2 dòng data
+01-01-2018 :: 20:11:09 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 20:11:09 : Query success.
+01-01-2018 :: 20:11:09 : Có 3 dòng data
+01-01-2018 :: 20:11:28 : Query insGuessPeoviderById :  INSERT INTO tb_person  ( person_id  , person_name , person_address , person_phone , typeperson , del_fg ) VALUES ( 'NCC1' , N'Cyto' , N'0123456789' , '1231231231' , 1 , 0)
+01-01-2018 :: 20:11:28 : Query success.
+01-01-2018 :: 20:11:28 : Result database : Đã insert thành công ID :NCC1 vào database.
+01-01-2018 :: 20:11:28 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 20:11:28 : Query success.
+01-01-2018 :: 20:11:28 : Có 3 dòng data
+01-01-2018 :: 20:11:34 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 20:11:34 : Query success.
+01-01-2018 :: 20:11:34 : Có 0 dòng data
+01-01-2018 :: 20:11:34 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 20:11:34 : Query success.
+01-01-2018 :: 20:11:34 : Có 2 dòng data
+01-01-2018 :: 20:11:34 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 20:11:34 : Query success.
+01-01-2018 :: 20:11:34 : Có 3 dòng data
+01-01-2018 :: 20:11:54 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 20:11:54 : Query success.
+01-01-2018 :: 20:11:54 : Có 3 dòng data
+01-01-2018 :: 20:11:55 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 20:11:55 : Query success.
+01-01-2018 :: 20:11:55 : Có 3 dòng data
+01-01-2018 :: 20:11:55 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 20:11:55 : Query success.
+01-01-2018 :: 20:11:55 : Có 3 dòng data
+01-01-2018 :: 20:11:56 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 20:11:56 : Query success.
+01-01-2018 :: 20:11:56 : Có 3 dòng data
+01-01-2018 :: 20:11:56 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 20:11:56 : Query success.
+01-01-2018 :: 20:11:56 : Có 3 dòng data
+01-01-2018 :: 20:11:56 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 20:11:56 : Query success.
+01-01-2018 :: 20:11:56 : Có 3 dòng data
+01-01-2018 :: 20:11:56 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 20:11:56 : Query success.
+01-01-2018 :: 20:11:56 : Có 3 dòng data
+01-01-2018 :: 20:11:56 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 20:11:56 : Query success.
+01-01-2018 :: 20:11:56 : Có 3 dòng data
+01-01-2018 :: 20:11:57 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 20:11:57 : Query success.
+01-01-2018 :: 20:11:57 : Có 3 dòng data
+01-01-2018 :: 20:11:58 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 20:11:58 : Query success.
+01-01-2018 :: 20:11:58 : Có 3 dòng data
+01-01-2018 :: 20:11:58 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 20:11:58 : Query success.
+01-01-2018 :: 20:11:58 : Có 3 dòng data
+01-01-2018 :: 20:11:58 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 20:11:58 : Query success.
+01-01-2018 :: 20:11:58 : Có 3 dòng data
+01-01-2018 :: 20:12:03 : Query getLstGuessProviderByKey : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and (bi.person_id like '%NCC1%'   OR person_name like '%NCC1%'   OR person_phone = 'NCC1'   OR person_address like '%NCC1%')  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 20:12:04 : Query success.
+01-01-2018 :: 20:12:04 : Có 0 dòng data
+01-01-2018 :: 20:12:04 : Query getLstGuessProviderByKey : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and (bi.person_id like '%NCC1%'   OR person_name like '%NCC1%'   OR person_phone = 'NCC1'   OR person_address like '%NCC1%')  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 20:12:04 : Query success.
+01-01-2018 :: 20:12:04 : Có 0 dòng data
+01-01-2018 :: 20:12:04 : Query getLstGuessProviderByKey : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and (bi.person_id like '%NCC1%'   OR person_name like '%NCC1%'   OR person_phone = 'NCC1'   OR person_address like '%NCC1%')  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson  order by  bi.person_id
+01-01-2018 :: 20:12:04 : Query success.
+01-01-2018 :: 20:12:04 : Có 0 dòng data
+01-01-2018 :: 20:24:29 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 20:24:29 : Query success.
+01-01-2018 :: 20:24:29 : Có 0 dòng data
+01-01-2018 :: 20:24:29 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 20:24:29 : Query success.
+01-01-2018 :: 20:24:29 : Có 2 dòng data
+01-01-2018 :: 20:24:30 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 20:24:30 : Query success.
+01-01-2018 :: 20:24:30 : Có 3 dòng data
+01-01-2018 :: 21:44:14 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 21:44:15 : Query success.
+01-01-2018 :: 21:44:15 : Có 0 dòng data
+01-01-2018 :: 21:44:15 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 21:44:16 : Query success.
+01-01-2018 :: 21:44:16 : Có 2 dòng data
+01-01-2018 :: 21:44:59 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 21:45:00 : Query success.
+01-01-2018 :: 21:45:00 : Có 3 dòng data
+01-01-2018 :: 21:45:28 : Query checkGuessProviderExists : SELECT person_id FROM tb_person where person_id = 'KH1'
+01-01-2018 :: 21:45:28 : Query success.
+01-01-2018 :: 21:52:56 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 21:52:56 : Query success.
+01-01-2018 :: 21:52:56 : Có 0 dòng data
+01-01-2018 :: 21:52:56 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 21:52:56 : Query success.
+01-01-2018 :: 21:52:56 : Có 2 dòng data
+01-01-2018 :: 21:52:57 : Query getLstGuessProvider : select row_number()OVER (ORDER BY bi.person_id asc ) as STT, bi.person_id, person_name, person_address, person_phone, count(bi.person_id) as num_deal, max(bill_date) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson  from tb_person per , tb_bill bi  where per.person_id = bi.person_id  and per.del_fg = 0  and bi.del_fg = 0  group by  bi.person_id, person_name, person_address, person_phone, typeperson
+01-01-2018 :: 21:52:57 : Query success.
+01-01-2018 :: 21:52:57 : Có 3 dòng data
+01-01-2018 :: 22:46:23 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 22:46:23 : Query success.
+01-01-2018 :: 22:46:23 : Có 0 dòng data
+01-01-2018 :: 22:46:23 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 22:46:23 : Query success.
+01-01-2018 :: 22:46:23 : Có 2 dòng data
+01-01-2018 :: 22:46:24 : Query getLstGuessProvider : select row_number()OVER(ORDER BY per.person_id asc) as STT, per.person_id, person_name, person_address, person_phone, (case deal.num_deal when NULL THEN 0 ELSE deal.num_deal END ) as num_deal, (case deal.date_deal when NULL THEN '' ELSE deal.date_deal END ) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson from tb_person per left outer join     (select count(bi.person_id) as num_deal     ,per.person_id     ,max(bill_date) as date_deal     From tb_person per left join tb_bill bi     on per.person_id = bi.person_id     where bi.del_fg = 0     group by per.person_id) deal on per.person_id = deal.person_id where per.del_fg = 0 group by deal.date_deal,deal.num_deal,per.person_id,person_name,person_address,person_phone,typeperson
+01-01-2018 :: 22:46:24 : Query success.
+01-01-2018 :: 22:46:24 : Có 4 dòng data
+01-01-2018 :: 22:54:43 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 22:54:43 : Query success.
+01-01-2018 :: 22:54:43 : Có 0 dòng data
+01-01-2018 :: 22:54:43 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 22:54:43 : Query success.
+01-01-2018 :: 22:54:43 : Có 2 dòng data
+01-01-2018 :: 22:54:45 : Query getLstGuessProvider : select row_number()OVER(ORDER BY per.person_id asc) as STT, per.person_id, person_name, person_address, person_phone, (case deal.num_deal when NULL THEN 0 ELSE deal.num_deal END ) as num_deal, (case deal.date_deal when NULL THEN '' ELSE deal.date_deal END ) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson from tb_person per left outer join     (select count(bi.person_id) as num_deal     ,per.person_id     ,max(bill_date) as date_deal     From tb_person per left join tb_bill bi     on per.person_id = bi.person_id     where bi.del_fg = 0     group by per.person_id) deal on per.person_id = deal.person_id where per.del_fg = 0 group by deal.date_deal,deal.num_deal,per.person_id,person_name,person_address,person_phone,typeperson
+01-01-2018 :: 22:54:45 : Query success.
+01-01-2018 :: 22:54:45 : Có 4 dòng data
+01-01-2018 :: 22:55:23 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 22:55:23 : Query success.
+01-01-2018 :: 22:55:23 : Có 0 dòng data
+01-01-2018 :: 22:55:23 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 22:55:23 : Query success.
+01-01-2018 :: 22:55:23 : Có 2 dòng data
+01-01-2018 :: 22:55:24 : Query getLstGuessProvider : select row_number()OVER(ORDER BY per.person_id asc) as STT, per.person_id, person_name, person_address, person_phone, (case deal.num_deal when NULL THEN 0 ELSE deal.num_deal END ) as num_deal, (case deal.date_deal when NULL THEN '' ELSE deal.date_deal END ) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson from tb_person per left outer join     (select count(bi.person_id) as num_deal     ,per.person_id     ,max(bill_date) as date_deal     From tb_person per left join tb_bill bi     on per.person_id = bi.person_id     where bi.del_fg = 0     group by per.person_id) deal on per.person_id = deal.person_id where per.del_fg = 0 group by deal.date_deal,deal.num_deal,per.person_id,person_name,person_address,person_phone,typeperson
+01-01-2018 :: 22:55:24 : Query success.
+01-01-2018 :: 22:55:24 : Có 4 dòng data
+01-01-2018 :: 22:58:08 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 22:58:08 : Query success.
+01-01-2018 :: 22:58:08 : Có 0 dòng data
+01-01-2018 :: 22:58:08 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 22:58:08 : Query success.
+01-01-2018 :: 22:58:08 : Có 2 dòng data
+01-01-2018 :: 22:58:09 : Query getLstGuessProvider : select row_number()OVER(ORDER BY per.person_id asc) as STT, per.person_id, person_name, person_address, person_phone, (case when deal.num_deal IS NULL THEN 0 ELSE deal.num_deal END ) as num_deal, (case deal.date_deal when NULL THEN '' ELSE deal.date_deal END ) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson from tb_person per left outer join     (select count(bi.person_id) as num_deal     ,per.person_id     ,max(bill_date) as date_deal     From tb_person per left join tb_bill bi     on per.person_id = bi.person_id     where bi.del_fg = 0     group by per.person_id) deal on per.person_id = deal.person_id where per.del_fg = 0 group by deal.date_deal,deal.num_deal,per.person_id,person_name,person_address,person_phone,typeperson
+01-01-2018 :: 22:58:09 : Query success.
+01-01-2018 :: 22:58:09 : Có 4 dòng data
+01-01-2018 :: 23:05:18 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 23:05:18 : Query success.
+01-01-2018 :: 23:05:18 : Có 0 dòng data
+01-01-2018 :: 23:05:18 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 23:05:18 : Query success.
+01-01-2018 :: 23:05:18 : Có 2 dòng data
+01-01-2018 :: 23:05:20 : Query getLstGuessProvider : select row_number()OVER(ORDER BY per.person_id asc) as STT, per.person_id, person_name, person_address, person_phone, (case when deal.num_deal IS NULL THEN 0 ELSE deal.num_deal END ) as num_deal, (case deal.date_deal when NULL THEN '' ELSE deal.date_deal END ) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson from tb_person per left outer join     (select count(bi.person_id) as num_deal     ,per.person_id     ,max(bill_date) as date_deal     From tb_person per left join tb_bill bi     on per.person_id = bi.person_id     where bi.del_fg = 0     group by per.person_id) deal on per.person_id = deal.person_id where per.del_fg = 0 group by deal.date_deal,deal.num_deal,per.person_id,person_name,person_address,person_phone,typeperson
+01-01-2018 :: 23:05:20 : Query success.
+01-01-2018 :: 23:05:20 : Có 4 dòng data
+01-01-2018 :: 23:05:23 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 23:05:23 : Query success.
+01-01-2018 :: 23:05:23 : Có 0 dòng data
+01-01-2018 :: 23:05:23 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 23:05:23 : Query success.
+01-01-2018 :: 23:05:23 : Có 2 dòng data
+01-01-2018 :: 23:05:24 : Query getLstGuessProvider : select row_number()OVER(ORDER BY per.person_id asc) as STT, per.person_id, person_name, person_address, person_phone, (case when deal.num_deal IS NULL THEN 0 ELSE deal.num_deal END ) as num_deal, (case deal.date_deal when NULL THEN '' ELSE deal.date_deal END ) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson from tb_person per left outer join     (select count(bi.person_id) as num_deal     ,per.person_id     ,max(bill_date) as date_deal     From tb_person per left join tb_bill bi     on per.person_id = bi.person_id     where bi.del_fg = 0     group by per.person_id) deal on per.person_id = deal.person_id where per.del_fg = 0 group by deal.date_deal,deal.num_deal,per.person_id,person_name,person_address,person_phone,typeperson
+01-01-2018 :: 23:05:24 : Query success.
+01-01-2018 :: 23:05:24 : Có 4 dòng data
+01-01-2018 :: 23:05:25 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 23:05:25 : Query success.
+01-01-2018 :: 23:05:25 : Có 0 dòng data
+01-01-2018 :: 23:05:25 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 23:05:25 : Query success.
+01-01-2018 :: 23:05:25 : Có 2 dòng data
+01-01-2018 :: 23:05:26 : Query getLstGuessProvider : select row_number()OVER(ORDER BY per.person_id asc) as STT, per.person_id, person_name, person_address, person_phone, (case when deal.num_deal IS NULL THEN 0 ELSE deal.num_deal END ) as num_deal, (case deal.date_deal when NULL THEN '' ELSE deal.date_deal END ) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson from tb_person per left outer join     (select count(bi.person_id) as num_deal     ,per.person_id     ,max(bill_date) as date_deal     From tb_person per left join tb_bill bi     on per.person_id = bi.person_id     where bi.del_fg = 0     group by per.person_id) deal on per.person_id = deal.person_id where per.del_fg = 0 group by deal.date_deal,deal.num_deal,per.person_id,person_name,person_address,person_phone,typeperson
+01-01-2018 :: 23:05:26 : Query success.
+01-01-2018 :: 23:05:26 : Có 4 dòng data
+01-01-2018 :: 23:05:54 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 23:05:54 : Query success.
+01-01-2018 :: 23:05:54 : Có 0 dòng data
+01-01-2018 :: 23:05:54 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 23:05:54 : Query success.
+01-01-2018 :: 23:05:54 : Có 2 dòng data
+01-01-2018 :: 23:05:55 : Query getLstGuessProvider : select row_number()OVER(ORDER BY per.person_id asc) as STT, per.person_id, person_name, person_address, person_phone, (case when deal.num_deal IS NULL THEN 0 ELSE deal.num_deal END ) as num_deal, (case deal.date_deal when NULL THEN '' ELSE deal.date_deal END ) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson from tb_person per left outer join     (select count(bi.person_id) as num_deal     ,per.person_id     ,max(bill_date) as date_deal     From tb_person per left join tb_bill bi     on per.person_id = bi.person_id     where bi.del_fg = 0     group by per.person_id) deal on per.person_id = deal.person_id where per.del_fg = 0 group by deal.date_deal,deal.num_deal,per.person_id,person_name,person_address,person_phone,typeperson
+01-01-2018 :: 23:05:55 : Query success.
+01-01-2018 :: 23:05:55 : Có 4 dòng data
+01-01-2018 :: 23:12:32 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 23:12:32 : Query success.
+01-01-2018 :: 23:12:32 : Có 0 dòng data
+01-01-2018 :: 23:12:32 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 23:12:32 : Query success.
+01-01-2018 :: 23:12:32 : Có 2 dòng data
+01-01-2018 :: 23:12:34 : Query getLstGuessProvider : select row_number()OVER(ORDER BY per.person_id asc) as STT, per.person_id, person_name, person_address, person_phone, (case when deal.num_deal IS NULL THEN 0 ELSE deal.num_deal END ) as num_deal, (case deal.date_deal when NULL THEN '' ELSE deal.date_deal END ) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson from tb_person per left outer join     (select count(bi.person_id) as num_deal     ,per.person_id     ,max(bill_date) as date_deal     From tb_person per left join tb_bill bi     on per.person_id = bi.person_id     where bi.del_fg = 0     group by per.person_id) deal on per.person_id = deal.person_id where per.del_fg = 0 group by deal.date_deal,deal.num_deal,per.person_id,person_name,person_address,person_phone,typeperson
+01-01-2018 :: 23:12:34 : Query success.
+01-01-2018 :: 23:12:34 : Có 4 dòng data
+01-01-2018 :: 23:13:12 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhâp hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2018-01-01' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+01-01-2018 :: 23:13:12 : Query success.
+01-01-2018 :: 23:13:12 : Có 0 dòng data
+01-01-2018 :: 23:13:12 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+01-01-2018 :: 23:13:13 : Query success.
+01-01-2018 :: 23:13:13 : Có 2 dòng data
+01-01-2018 :: 23:13:14 : Query getLstGuessProvider : select row_number()OVER(ORDER BY per.person_id asc) as STT, per.person_id, person_name, person_address, person_phone, (case when deal.num_deal IS NULL THEN 0 ELSE deal.num_deal END ) as num_deal, (case deal.date_deal when NULL THEN '' ELSE deal.date_deal END ) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson from tb_person per left outer join     (select count(bi.person_id) as num_deal     ,per.person_id     ,max(bill_date) as date_deal     From tb_person per left join tb_bill bi     on per.person_id = bi.person_id     where bi.del_fg = 0     group by per.person_id) deal on per.person_id = deal.person_id where per.del_fg = 0 group by deal.date_deal,deal.num_deal,per.person_id,person_name,person_address,person_phone,typeperson
+01-01-2018 :: 23:13:14 : Query success.
+01-01-2018 :: 23:13:14 : Có 4 dòng data
+01-01-2018 :: 23:15:52 : Query getLstGuessProviderByType : select row_number()OVER(ORDER BY per.person_id asc) as STT, per.person_id, person_name, person_address, person_phone, (case when deal.num_deal IS NULL THEN 0 ELSE deal.num_deal END ) as num_deal, (case deal.date_deal when NULL THEN '' ELSE deal.date_deal END ) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson from tb_person per left outer join     (select count(bi.person_id) as num_deal     ,per.person_id     ,max(bill_date) as date_deal     From tb_person per left join tb_bill bi     on per.person_id = bi.person_id     where bi.del_fg = 0     group by per.person_id) deal on per.person_id = deal.person_id where per.del_fg = 0 and typeperson = 1  group by deal.date_deal,deal.num_deal,per.person_id,person_name,person_address,person_phone,typeperson
+01-01-2018 :: 23:15:52 : Query success.
+01-01-2018 :: 23:15:52 : Có 2 dòng data
+01-01-2018 :: 23:15:53 : Query getLstGuessProviderByType : select row_number()OVER(ORDER BY per.person_id asc) as STT, per.person_id, person_name, person_address, person_phone, (case when deal.num_deal IS NULL THEN 0 ELSE deal.num_deal END ) as num_deal, (case deal.date_deal when NULL THEN '' ELSE deal.date_deal END ) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson from tb_person per left outer join     (select count(bi.person_id) as num_deal     ,per.person_id     ,max(bill_date) as date_deal     From tb_person per left join tb_bill bi     on per.person_id = bi.person_id     where bi.del_fg = 0     group by per.person_id) deal on per.person_id = deal.person_id where per.del_fg = 0 and typeperson = 2  group by deal.date_deal,deal.num_deal,per.person_id,person_name,person_address,person_phone,typeperson
+01-01-2018 :: 23:15:53 : Query success.
+01-01-2018 :: 23:15:53 : Có 2 dòng data
+01-01-2018 :: 23:15:56 : Query getLstGuessProvider : select row_number()OVER(ORDER BY per.person_id asc) as STT, per.person_id, person_name, person_address, person_phone, (case when deal.num_deal IS NULL THEN 0 ELSE deal.num_deal END ) as num_deal, (case deal.date_deal when NULL THEN '' ELSE deal.date_deal END ) as date_deal, (case typeperson when 1 then 'Khách hàng' else 'Nhà cung câp' end) as typeperson from tb_person per left outer join     (select count(bi.person_id) as num_deal     ,per.person_id     ,max(bill_date) as date_deal     From tb_person per left join tb_bill bi     on per.person_id = bi.person_id     where bi.del_fg = 0     group by per.person_id) deal on per.person_id = deal.person_id where per.del_fg = 0 group by deal.date_deal,deal.num_deal,per.person_id,person_name,person_address,person_phone,typeperson
+01-01-2018 :: 23:15:56 : Query success.
+01-01-2018 :: 23:15:56 : Có 4 dòng data

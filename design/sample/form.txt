@@ -1,0 +1,1264 @@
+#region MODIFY
+        HamChung hc = new HamChung();
+        retrieve re = new retrieve();
+        Timer tm = new Timer();
+        db_Nhaphang dbnhap = new db_Nhaphang();
+        db_Product dbpro = new db_Product();
+        db_User dbUser = new db_User();
+        //controller
+        ctrl_Kho kho = new ctrl_Kho();
+
+        ctrl_Nhaphang nhaphang = new ctrl_Nhaphang();
+
+      
+        #endregion
+        #region Variable
+        int idhd = 0;
+        int statusSelect = 0;
+        int sttIUKhachhang = 0;
+
+        int indexTabNhaphang = 2;
+        int indexTabBanhang = 3;
+        int indexTabThongKe = 5;
+        #endregion
+        #region FORM1
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'quanLyBanHangDataSet1.tb_Provider' table. You can move, or remove it, as needed.
+            
+            clock();
+            loadFormNhaphang();
+            loadKhoProduct();
+            //tabKho click 
+            
+        }
+        public void tm_Tick(object sender, EventArgs e)
+        {
+            var da = DateTime.Now.DayOfWeek;
+            var dd = DateTime.Now.Day;
+            var mth = DateTime.Now.Month;
+            var yy = DateTime.Now.Year;
+            lbHello.Text = "Hôm nay là : " + convertDate(da.ToString()) + ", ngày " + dd.ToString() + ", tháng " + mth.ToString() + ", năm " + yy.ToString() + "";
+            string hh = Convert.ToString(DateTime.Now.Hour);
+            string mm = Convert.ToString(DateTime.Now.Minute);
+            string ss = Convert.ToString( DateTime.Now.Second);
+            if(hh.ToString().Length == 1)
+            {
+                hh = "0" + hh;
+            }
+            if(mm.ToString().Length == 1)
+            {
+                mm = "0" + mm;
+            }
+            if(ss.ToString().Length == 1)
+            {
+                ss = "0" + ss;
+            }
+            lbWatch.Text = hh.ToString() + ":" + mm.ToString() + ":" + ss.ToString();
+        }
+        //clock
+        public void clock()
+        {
+            tm.Interval = 1000;
+            tm.Tick += new EventHandler(this.tm_Tick);
+            tm.Start();
+        }
+        // animation for text 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (lbHello.Left < gbCongviec.Width)
+            {
+                lbHello.Left = lbHello.Left + 5;
+            }
+            else
+            {
+                lbHello.Left = 0;
+            }
+        }
+        // convert date eng to date viet nam
+        public string convertDate(string eng_date)
+        {
+            string vn_date = "";
+            if (eng_date.Equals("Monday"))
+            {
+                vn_date = "Thứ 2";
+            }
+            if (eng_date.Equals("Tuesday"))
+            {
+                vn_date = "Thứ 3";
+            }
+            if (eng_date.Equals("Wednesday"))
+            {
+                vn_date = "Thứ 4";
+            }
+            if (eng_date.Equals("Thursday"))
+            {
+                vn_date = "Thứ 5";
+            }
+            if (eng_date.Equals("Friday"))
+            {
+                vn_date = "Thứ 6";
+            }
+            if (eng_date.Equals("Saturday"))
+            {
+                vn_date = "Thứ 7";
+            }
+            if (eng_date.Equals("Sunday"))
+            {
+                vn_date = "Chủ nhật";
+            }
+            return vn_date;
+        }
+        private void dtpkImPort_ValueChanged(object sender, EventArgs e)
+        {
+            string theDate = dtpkNhap.Value.ToString("yyyy-MM-dd");
+            var hour = DateTime.Now.Hour;
+            var min = DateTime.Now.Minute;
+            var se = DateTime.Now.Second;
+            txtNhapDate.Text = theDate.ToString() + " " + hour + ":" + min + ":" + se;
+        }
+        #endregion
+        private void tabKho_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            frmKhachhang();
+            frmNCC();
+        }
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            frmKhachhang();
+            frmNCC();
+        }
+        #region Khach hang 
+        //Tab khach hang
+
+        public void frmKhachhang()
+        {
+            hc.loadListView(re.getAllGuess(),lvKhachhang);
+            txtKHTimKiem.Enabled = true;
+            btnKHTimKiem.Enabled = true;
+            txtKHMakh.Enabled = false;
+            txtKHTenkh.Enabled = false;
+            txtKHSDT.Enabled = false;
+            txtKHDiachi.Enabled = false;
+            txtKHNogiaodich.Enabled = false;
+            btnKHThem.Enabled = true;
+            btnKHXoa.Enabled = false;
+            btnKHLuulai.Enabled = false;
+            btnKHHuy.Enabled = true;
+            btnKHHuy.Text = "Quay lại";
+            txtKHMakh.Text = "";
+            txtKHTenkh.Text = "";
+            txtKHSDT.Text = "";
+            txtKHDiachi.Text = "";
+            txtKHNogiaodich.Text = "";
+        }
+        private void lvKhachhang_Click(object sender, EventArgs e)
+        {
+            txtKHMakh.Enabled = false;
+            txtKHTenkh.Enabled = true;
+            txtKHSDT.Enabled = true;
+            txtKHDiachi.Enabled = true;
+            txtKHNogiaodich.Enabled = true;
+            btnKHThem.Enabled = false;
+            btnKHXoa.Enabled = true;
+            btnKHLuulai.Enabled = true;
+            btnKHHuy.Enabled = true;
+            txtKHMakh.Text = lvKhachhang.SelectedItems[0].SubItems[1].Text.ToString();
+            txtKHTenkh.Text = lvKhachhang.SelectedItems[0].SubItems[2].Text.ToString();
+            txtKHSDT.Text = lvKhachhang.SelectedItems[0].SubItems[4].Text.ToString();
+            txtKHDiachi.Text = lvKhachhang.SelectedItems[0].SubItems[3].Text.ToString();
+            //txtKHNoGiaodich.Text = tlvKhachhang.SubItem.ToString();
+            btnKHHuy.Text = "Hủy";
+            sttIUKhachhang = 1;
+        }
+        private void btnKHTimKiem_Click(object sender, EventArgs e)
+        {
+            if (txtKHTimKiem.Text.ToString().Length > 0)
+            {
+                hc.loadListView(re.getAllGuessById(txtKHTimKiem.Text.ToString()),lvKhachhang);
+            }
+        }
+        private void txtKHTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if (txtKHTimKiem.Text.ToString().Length == 0)
+            {
+                hc.loadListView(re.getAllGuess(), lvKhachhang);
+            }
+        }
+        private void btnKHThem_Click(object sender, EventArgs e)
+        {
+            txtKHMakh.Enabled = true;
+            txtKHTenkh.Enabled = true;
+            txtKHSDT.Enabled = true;
+            txtKHDiachi.Enabled = true;
+            txtKHNogiaodich.Enabled = false;
+            btnKHThem.Enabled = false;
+            btnKHXoa.Enabled = false;
+            btnKHLuulai.Enabled = true;
+            btnKHHuy.Enabled = true;
+            txtKHMakh.Text = "";
+            txtKHTenkh.Text = "";
+            txtKHSDT.Text = "";
+            txtKHDiachi.Text = "";
+            txtKHNogiaodich.Text = "0";
+            btnKHHuy.Text = "Hủy";
+            sttIUKhachhang = 0;
+        }
+        private void btnKHXoa_Click(object sender, EventArgs e)
+        {
+            if (hc.DialogYesNo("Xóa khách hàng?", "Thông báo!") == 1)
+            {
+                if (dbnhap.delGuessbyId(txtKHMakh.Text.ToString())== true)
+                {
+                    hc.loadListView(re.getAllGuess(), lvKhachhang);
+                    txtKHMakh.Enabled = false;
+                    txtKHTenkh.Enabled = false;
+                    txtKHSDT.Enabled = false;
+                    txtKHDiachi.Enabled = false;
+                    txtKHNogiaodich.Enabled = false;
+                    btnKHThem.Enabled = true;
+                    btnKHXoa.Enabled = false;
+                    btnKHLuulai.Enabled = false;
+                    btnKHHuy.Enabled = true;
+                    txtKHMakh.Text = "";
+                    txtKHTenkh.Text = "";
+                    txtKHSDT.Text = "";
+                    txtKHDiachi.Text = "";
+                    txtKHNogiaodich.Text = "";
+                    btnKHHuy.Text = "Quay lại";
+                    MessageBox.Show("Đã xóa!");
+                }
+            }
+            else
+            {
+               
+            }
+        }
+        private void btnKHLuulai_Click(object sender, EventArgs e)
+        {
+            if (txtKHMakh.Text.Length > 0)
+            {
+                var makh = txtKHMakh.Text.ToString();
+                var tenkh = txtKHTenkh.Text.ToString();
+                var diachi = txtKHDiachi.Text.ToString();
+                var sdt = txtKHSDT.Text.ToString();
+                //UPDATE
+                if(sttIUKhachhang == 1)
+                {
+                    if (dbnhap.updateGuess(makh, tenkh, diachi, sdt) == true)
+                    {
+                        hc.loadListView(re.getAllGuess(), lvKhachhang);
+                        txtKHMakh.Enabled = false;
+                        txtKHTenkh.Enabled = false;
+                        txtKHSDT.Enabled = false;
+                        txtKHDiachi.Enabled = false;
+                        txtKHNogiaodich.Enabled = false;
+                        txtKHMakh.Text = "";
+                        txtKHTenkh.Text = "";
+                        txtKHSDT.Text = "";
+                        txtKHDiachi.Text = "";
+                        txtKHNogiaodich.Text = "";
+                        btnKHThem.Enabled = true;
+                        btnKHXoa.Enabled = false;
+                        btnKHLuulai.Enabled = false;
+                        btnKHHuy.Enabled = true;
+                        btnKHHuy.Text = "Quay lại";
+                        MessageBox.Show("Đã cập nhật thông tin khách hàng!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đã xãy ra lỗi! Vui lòng thử lại.");
+                    }
+                }
+                //INSERT 
+                else
+                {
+                    if (re.checkExistsGuess(txtKHMakh.Text.ToString()) == true)
+                    {
+                        MessageBox.Show("Mã khách hàng đã tồn tại!");
+                    }
+                    else
+                    {
+                        if (dbnhap.insertGuess(makh, tenkh, diachi, sdt) == true)
+                        {
+                            hc.loadListView(re.getAllGuess(), lvKhachhang);
+                            txtKHMakh.Enabled = false;
+                            txtKHTenkh.Enabled = false;
+                            txtKHSDT.Enabled = false;
+                            txtKHDiachi.Enabled = false;
+                            txtKHNogiaodich.Enabled = false;
+                            txtKHMakh.Text = "";
+                            txtKHTenkh.Text = "";
+                            txtKHSDT.Text = "";
+                            txtKHDiachi.Text = "";
+                            txtKHNogiaodich.Text = "";
+                            btnKHThem.Enabled = true;
+                            btnKHXoa.Enabled = false;
+                            btnKHLuulai.Enabled = false;
+                            btnKHHuy.Enabled = true;
+                            btnKHHuy.Text = "Quay lại";
+                            MessageBox.Show("Đã thêm khách hàng thành công!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Đã xãy ra lỗi! Vui lòng thử lại.");
+                        }
+                    }
+                }
+               
+            }
+            //khong co ma kh
+            else
+            {
+                MessageBox.Show("Chưa có mã khách hàng!");
+            }
+        }
+        private void btnKHHuy_Click(object sender, EventArgs e)
+        {
+            if (btnKHHuy.Text.Equals("Hủy"))
+            {
+                if (hc.DialogYesNo("Hủy thao tác?", "Thông báo!") == 1)
+                {
+                    frmKhachhang();
+                    
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+                tabBanhang.SelectedIndex = 0;
+            }
+           
+        }
+
+        #endregion
+
+        #region NCC
+        public void frmNCC()
+        {
+            hc.loadListView(re.getAllProvider(),lvNCC);
+            txtNCCTimKiem.Enabled = true;
+            btnNCCTimKiem.Enabled = true;
+            txtNCCMancc.Enabled = false;
+            txtNCCTNcc.Enabled = false;
+            txtNCCSDT.Enabled = false;
+            txtNCCDiachi.Enabled = false;
+            txtNCCNogiaodich.Enabled = false;
+            btnNCCThem.Enabled = true;
+            btnNCCXoa.Enabled = false;
+            btnNCCLuulai.Enabled = false;
+            btnNCCHuy.Enabled = true;
+            txtNCCMancc.Text = "";
+            txtNCCTNcc.Text = "";
+            txtNCCSDT.Text = "";
+            txtNCCDiachi.Text = "";
+        }
+        private void btnNCCTimKiem_Click(object sender, EventArgs e)
+        {
+            if (txtNCCTimKiem.Text.ToString().Length > 0)
+            {
+                hc.loadListView(re.getAllProviderById(txtNCCTimKiem.Text.ToString()), lvNCC);
+            }
+        }
+
+        private void txtNCCTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNCCTimKiem.Text.ToString().Length == 0)
+            {
+                hc.loadListView(re.getAllProvider(), lvNCC);
+            }
+        }
+        private void lvNCC_Click(object sender, EventArgs e)
+        {
+            txtNCCMancc.Text =  lvNCC.SelectedItems[0].SubItems[1].Text.ToString();
+            txtNCCTNcc.Text = lvNCC.SelectedItems[0].SubItems[2].Text.ToString();
+            txtNCCSDT.Text = lvNCC.SelectedItems[0].SubItems[4].Text.ToString();
+            txtNCCDiachi.Text = lvNCC.SelectedItems[0].SubItems[3].Text.ToString();
+            txtNCCNogiaodich.Text = lvNCC.SelectedItems[0].SubItems[5].Text.ToString();
+            txtNCCMancc.Enabled = false;
+            txtNCCTNcc.Enabled = true;
+            txtNCCSDT.Enabled = true;
+            txtNCCDiachi.Enabled = true;
+            txtNCCNogiaodich.Enabled = true;
+            btnNCCThem.Enabled = false;
+            btnNCCXoa.Enabled = true;
+            btnNCCLuulai.Enabled = true;
+            btnNCCHuy.Enabled = true;
+            btnNCCHuy.Text = "Hủy";
+        }
+        private void btnNCCThem_Click(object sender, EventArgs e)
+        {
+            txtNCCMancc.Enabled = true;
+            txtNCCTNcc.Enabled = true;
+            txtNCCSDT.Enabled = true;
+            txtNCCDiachi.Enabled = true;
+            txtNCCNogiaodich.Enabled = false;
+            btnNCCThem.Enabled = false;
+            btnNCCXoa.Enabled = false;
+            btnNCCLuulai.Enabled = true;
+            btnNCCHuy.Enabled = true;
+            btnNCCHuy.Text = "Hủy";
+            txtNCCMancc.Text = ""; 
+            txtNCCTNcc.Text = "";
+            txtNCCSDT.Text = "";
+            txtNCCDiachi.Text = "";
+            txtNCCNogiaodich.Text = "0";
+        }
+
+        private void btnNCCXoa_Click(object sender, EventArgs e)
+        {
+            if (hc.DialogYesNo("Xóa nhà cung cấp?", "Thông báo!") == 1)
+            {
+                if (dbnhap.delProviderbyId(txtNCCMancc.Text.ToString()) == true)
+                {
+                    MessageBox.Show("Đã xóa");
+                    hc.loadListView(re.getAllProvider(), lvNCC);
+                    txtNCCMancc.Enabled = false;
+                    txtNCCTNcc.Enabled = false;
+                    txtNCCSDT.Enabled = false;
+                    txtNCCDiachi.Enabled = false;
+                    txtNCCNogiaodich.Enabled = false;
+                    txtNCCMancc.Text = "";
+                    txtNCCTNcc.Text = "";
+                    txtNCCSDT.Text = "";
+                    txtNCCDiachi.Text = "";
+                    txtNCCNogiaodich.Text = "";
+                    btnNCCThem.Enabled = true;
+                    btnNCCXoa.Enabled = false;
+                    btnNCCLuulai.Enabled = false;
+                    btnNCCHuy.Enabled = true;
+                    btnNCCHuy.Text = "Quay lại";
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private void btnNCCLuulai_Click(object sender, EventArgs e)
+        {
+            if (txtKHMakh.Text.Length > 0)
+            {
+                var makh = txtKHMakh.Text.ToString();
+                var tenkh = txtKHTenkh.Text.ToString();
+                var diachi = txtKHDiachi.Text.ToString();
+                var sdt = txtKHSDT.Text.ToString();
+                //UPDATE
+                if (sttIUKhachhang == 1)
+                {
+                    if (dbnhap.updateGuess(makh, tenkh, diachi, sdt) == true)
+                    {
+                        hc.loadListView(re.getAllGuess(), lvKhachhang);
+                        txtKHMakh.Enabled = false;
+                        txtKHTenkh.Enabled = false;
+                        txtKHSDT.Enabled = false;
+                        txtKHDiachi.Enabled = false;
+                        txtKHNogiaodich.Enabled = false;
+                        txtKHMakh.Text = "";
+                        txtKHTenkh.Text = "";
+                        txtKHSDT.Text = "";
+                        txtKHDiachi.Text = "";
+                        txtKHNogiaodich.Text = "";
+                        btnKHThem.Enabled = true;
+                        btnKHXoa.Enabled = false;
+                        btnKHLuulai.Enabled = false;
+                        btnKHHuy.Enabled = true;
+                        btnKHHuy.Text = "Quay lại";
+                        MessageBox.Show("Đã cập nhật thông tin khách hàng!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đã xãy ra lỗi! Vui lòng thử lại.");
+                    }
+                }
+                //INSERT 
+                else
+                {
+                    if (re.checkExistsGuess(txtKHMakh.Text.ToString()) == true)
+                    {
+                        MessageBox.Show("Mã khách hàng đã tồn tại!");
+                    }
+                    else
+                    {
+                        if (dbnhap.insertGuess(makh, tenkh, diachi, sdt) == true)
+                        {
+                            hc.loadListView(re.getAllGuess(), lvKhachhang);
+                            txtKHMakh.Enabled = false;
+                            txtKHTenkh.Enabled = false;
+                            txtKHSDT.Enabled = false;
+                            txtKHDiachi.Enabled = false;
+                            txtKHNogiaodich.Enabled = false;
+                            txtKHMakh.Text = "";
+                            txtKHTenkh.Text = "";
+                            txtKHSDT.Text = "";
+                            txtKHDiachi.Text = "";
+                            txtKHNogiaodich.Text = "";
+                            btnKHThem.Enabled = true;
+                            btnKHXoa.Enabled = false;
+                            btnKHLuulai.Enabled = false;
+                            btnKHHuy.Enabled = true;
+                            btnKHHuy.Text = "Quay lại";
+                            MessageBox.Show("Đã thêm khách hàng thành công!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Đã xãy ra lỗi! Vui lòng thử lại.");
+                        }
+                    }
+                }
+
+            }
+            //khong co ma kh
+            else
+            {
+                MessageBox.Show("Chưa có mã khách hàng!");
+            }
+        }
+
+        private void btnNCCHuy_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        #endregion
+
+        #region MAIN
+
+        #endregion
+        #region Nhap hang
+        public void firstload()
+        {
+            btnNhapAdd.Enabled = false;
+            btnNhapCreate.Enabled = true;
+            btnNhapDel.Enabled = false;
+            btnNhapSave.Enabled = false;
+            btnNhapBack.Enabled = true;
+            txtNhapMH.Enabled = false;
+            txtNhapDate.Enabled = false;
+            txtNhapMHD.Enabled = false;
+            txtNhapTH.Enabled = false;
+        }
+        public void loadFormNhaphang()
+        {
+            firstload();
+            //load Date
+            //nhaphang.loadDate(txtNhapDate);
+            //load NCC 
+            //nhaphang.loadComboBox(cbbNhapNCC, re.getAllProvider(), "ID", "ID");
+            //load bill list
+            nhaphang.loadBillInList(re.getAllBillIn(), lvNhapHD);
+            //load ma hang hoa
+            
+
+            //int money = 1550000000;
+            //var text = money.ToString("N0", System.Globalization.CultureInfo.GetCultureInfo("de"));
+            //txtRiceIn.Text = text.ToString();
+        }
+        private void btnSavenhaphang_Click(object sender, EventArgs e)
+        {
+            // MessageBox.Show((re.getIdCatebyName(cbbCategory.Text.ToString()).ToString()));
+        }
+        private void cbbNCC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string id = Convert.ToString(cbbNhapNCC.SelectedValue.ToString());
+            nhaphang.cbbNCC_Selected(cbbNhapNCC, re.getInfobyID_Provider(id), txtNhapTNCC);
+        }
+        private void cbbNCC_TextChanged(object sender, EventArgs e)
+        {
+            txtNhapTNCC.Text = "";
+        }
+        private void btnTaohoadonnhap_Click(object sender, EventArgs e)
+        {
+            nhaphang.loadBillInList(re.getAllProduct(), lvNhapPro);
+            Random rd = new Random();
+            int maHD = rd.Next(1000, 9999);
+            #region ID BILL IN
+            while (re.checkHDexists(maHD) == false)
+            {
+                string ncc = cbbNhapNCC.Text.ToString();
+                #region NCC input
+                //have NCC
+                if (ncc.ToString().Length > 0)
+                {
+                    #region NCC is in data
+                    //NCC already 
+                    if (re.checkProviderExists(ncc) == true)
+                    {
+                        #region Create a bill in
+                        DialogResult dialogResult = MessageBox.Show("Lập một đơn hàng?", "Thông báo!", MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            // Bill in have note
+                            if (txtNhapND.Text.ToString().Length > 0)
+                            {
+                                dbnhap.creBillIn(Convert.ToString(maHD), txtNhapDate.Text.ToString(), ncc, txtNhapND.Text.ToString());
+                                txtNhapND.Text = "";
+                            }
+                            // Bill in have not note
+                            else
+                            {
+                                dbnhap.creBillIn(Convert.ToString(maHD), txtNhapDate.Text.ToString(), ncc, "");
+                            }
+                            // set txtMahnhap
+                            txtNhapMHD.Text = maHD.ToString();
+                            //load List Bill in
+                            //nhaphang.loadBillInList(bi.getAllBillIn(), lvBillIn);
+                        }
+                        //dilog NO
+                        else
+                        {
+                            break;
+                        }
+                        #endregion Create a bill in
+                    }
+                    //NCC not yet
+                    else
+                    {
+                        #region Create a new NCC 
+                        DialogResult dialogResult = MessageBox.Show("Mã nhà cung cấp không tồn tại!\nThêm mới nhà cung cấp " + ncc + "?", "Thông báo!", MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            var success = false;
+                            //NCC with name
+                            if (txtNhapTNCC.Text.ToString().Length > 0)
+                            {
+                                success = dbUser.addProvider(ncc, txtNhapTNCC.Text.ToString(), "", "", "");
+                                //nhaphang.loadComboBox(cbbNhapNCC, re.getAllProvider(), "ID", "ID");
+                            }
+                            // NCC without name
+                            else
+                            {
+                                success = dbUser.addProvider(ncc, "", "", "", "");
+                                //nhaphang.loadComboBox(cbbNhapNCC, re.getAllProvider(), "ID", "ID");
+                            }
+                            #region Create Bill In
+                            // create bill in
+                            if (success == true)
+                            {
+                                DialogResult dialogResult2 = MessageBox.Show("Đã thêm mới nhà cung cấp " + ncc + "!\nTạo đơn nhập hàng mới?", "Thông báo!", MessageBoxButtons.YesNo);
+                                if (dialogResult == DialogResult.Yes)
+                                {
+                                    dbnhap.creBillIn(Convert.ToString(maHD), txtNhapDate.Text.ToString(), ncc, "");
+
+                                }
+                                //dialog NO
+                                else
+                                {
+                                    break;
+                                }
+                            }
+                            else
+                            {
+                                break;
+                            }
+                            #endregion
+                            #endregion
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                    #endregion NCC is not exists
+                }
+                #endregion
+                #region no NCC input
+                // No NCC
+                else
+                {
+                    DialogResult dialogResult = MessageBox.Show("Lập đơn hàng không nhà cung cấp?", "Thông báo!", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        dbnhap.creBillIn(Convert.ToString(maHD), txtNhapDate.Text.ToString(), "NULL", "");
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                nhaphang.loadBillInList(re.getAllBillIn(), lvNhapHD);
+                #endregion
+            }
+            #endregion ID BILL IN
+
+        }
+        private void btnDanhsachHD_Click(object sender, EventArgs e)
+        {
+            nhaphang.loadBillInList(re.getAllBillIn(), lvNhapHD);
+        }
+        private void btnDelNhaphang_Click(object sender, EventArgs e)
+        {
+            #region Del BILL IN
+            if (statusSelect == 1)
+            {
+                if (re.checkHDhasProduct(idhd) == false)
+                {
+                    DialogResult dialogResult = MessageBox.Show("Xóa hóa đơn: " + idhd.ToString() + "?", "Thông báo!", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        dbnhap.delBillIn(idhd);
+                        nhaphang.loadBillInList(re.getAllBillIn(), lvNhapHD);
+                        statusSelect = 0;
+                    }
+                    else
+                    {
+                        statusSelect = 0;
+                    }
+                }
+                else
+                {
+                    DialogResult dialogResult = MessageBox.Show("Hóa đơn có hàng hóa! Đồng ý xóa?", "Thông báo!", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        bool delrs = dbnhap.delDTBillIn(idhd);
+                        if (delrs == true)
+                        {
+                            nhaphang.loadDTBillInList(re.getProByIdBillIn(idhd), lvDTBillIn, idhd);
+                            dbnhap.delBillIn(idhd);
+                            statusSelect = 0;
+                            nhaphang.loadBillInList(re.getAllBillIn(), lvNhapHD);
+                        }
+                    }
+                    else
+                    {
+                        statusSelect = 0;
+                    }
+                }
+            }
+            #endregion
+            #region Del DT Bill In
+            /* if(statusSelect == 2)
+             {
+                 DialogResult dialogResult = MessageBox.Show("Xóa "+txtTenhang.Text.ToString()+" trong đơn hàng "+txtMahdnhap.Text.ToString()+" ?", "Thông báo!", MessageBoxButtons.YesNo);
+                 if (dialogResult == DialogResult.Yes)
+                 {
+                     dbnhap.delDTBillIn(idhd);
+                     if (delrs == true)
+                     {
+                         nhaphang.loadDTBillInList(bi.getProByIdBillIn(idhd), lvDTBillIn, idhd);
+                         dbnhap.delBillIn(idhd);
+                         statusSelect = 0;
+                         nhaphang.loadBillInList(bi.getAllBillIn(), lvBillIn);
+                     }
+                 }
+                 else
+                 {
+                     statusSelect = 0;
+                 }
+             }*/
+            #endregion
+            else
+            {
+                MessageBox.Show("Chưa chọn để xóa!");
+            }
+        }
+        private void lvBillIn_Click(object sender, EventArgs e)
+        {
+            idhd = Convert.ToInt32(lvNhapHD.SelectedItems[0].SubItems[1].Text.ToString());
+            txtNhapMHD.Text = idhd.ToString();
+            txtNhapDate.Text = lvNhapHD.SelectedItems[0].SubItems[2].Text.ToString();
+            cbbNhapNCC.Text = lvNhapHD.SelectedItems[0].SubItems[4].Text.ToString();
+            txtNhapTNCC.Text = lvNhapHD.SelectedItems[0].SubItems[3].Text.ToString();
+            nhaphang.loadDTBillInList(re.getProByIdBillIn(idhd), lvDTBillIn, idhd);
+            statusSelect = 1;
+        }
+        private void lvDTBillIn_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            
+            txtNhapTH.Text = lvDTBillIn.SelectedItems[0].SubItems[3].Text.ToString();
+            txtNhapSL.Text = lvDTBillIn.SelectedItems[0].SubItems[4].Text.ToString();
+            txtNhapGC.Text = lvDTBillIn.SelectedItems[0].SubItems[5].Text.ToString();
+            statusSelect = 2;
+        }
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            #region Don hang ok 
+            if (txtNhapMHD.Text.ToString().Length > 0)
+            {
+                #region Info product ok 
+                //Hang hoa da ton tai
+                if (1 > 0)
+                {
+                    if (txtNhapSL.Text.ToString().Length > 0)
+                    {
+                        //
+                        if (txtNhapGC.Text.ToString().Length > 0)
+                        {
+                            //
+
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                }
+                // checkProInBill(int idbill, string pro)
+                //Hang hoa moi
+                #endregion
+                #region Info thieu 
+                #endregion
+            }
+            #endregion
+            #region Chua co don hang
+            #endregion
+            //case available product
+            string mahang = Convert.ToString(txtNhapMH.Text.ToString());
+
+            //co ma hoa don roi
+            if (txtNhapMHD.Text.ToString().Length > 0)
+            {
+                //cbb ma hang co luon
+                if (mahang.ToString().Length > 0)
+                {
+                    if (txtNhapSL.Text.ToString().Length > 0)
+                    {
+                        if (re.checkProExists(mahang) == false)
+                        {
+                            DialogResult dialogResult = MessageBox.Show(mahang + " chưa có trong kho.\nBạn muốn thêm mới hàng hóa này ?", "Thông báo!", MessageBoxButtons.YesNo);
+                            if (dialogResult == DialogResult.Yes)
+                            {
+                                bool result = false; //dbre.addProduct(mahang, txtTenhang.Text.ToString(), 0, 0, 0, "", 1, 1);
+                                if (result == true)
+                                {
+                                    dbnhap.addPro_toBillIn(Convert.ToInt32(txtNhapMHD.Text.ToString()), mahang, Convert.ToInt32(txtNhapSL.Text.ToString()), "");
+                                    MessageBox.Show("Thêm hàng thành công!");
+                                }
+                            }
+                            else
+                            {
+
+                            }
+                        }
+                        else
+                        {
+                            //note co 
+                            if (txtNhapGC.Text.ToString().Length > 0)
+                            {
+                                dbnhap.addPro_toBillIn(idhd, mahang, Convert.ToInt32(txtNhapSL.Text.ToString()), txtNhapGC.Text.ToString());
+                                txtNhapGC.Text = "";
+                                MessageBox.Show("Thêm hàng thành công!");
+                            }
+                            //note ko 
+                            else
+                            {
+                                dbnhap.addPro_toBillIn(idhd, mahang, Convert.ToInt32(txtNhapSL.Text.ToString()), "");
+                                MessageBox.Show("Thêm hàng thành công!");
+                            }
+                            nhaphang.loadDTBillInList(re.getProByIdBillIn(idhd), lvDTBillIn, idhd);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Chưa nhập số lượng hàng!");
+                    }
+
+                }
+                //case 
+                else
+                {
+
+                    MessageBox.Show("Không có mã hàng");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chưa chọn đơn nhập hàng!");
+            }
+            //case new product 
+
+        }
+       
+        #endregion
+        #region KHO
+        public void loadKhoProduct()
+        {
+          kho.loadKho(lvKho);
+          nhaphang.loadComboBox(cbbKhoDV, re.getAllUnit(), "Unitted", "ID");
+          nhaphang.loadComboBox(cbbKhoLH, re.getAllCategory(), "Categories", "ID");
+            btnKhoDel.Enabled = false;
+            btnKhoSave.Enabled = false;
+            btnKhoHuy.Enabled = false;
+            btnKhoIm.Enabled = true;
+            btnKhoHinh.Enabled = false;
+        }
+        #region btnSearchKho
+        //btn Click
+        private void btnSeKho_Click(object sender, EventArgs e)
+        {
+            if(txtSeKho.Text.ToString().Length > 0)
+            {
+                kho.loadKhoSearch(lvKho,txtSeKho.Text.ToString());
+            }
+        }
+        //press Enter
+        private void txtSeKho_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txtSeKho.Text.ToString().Length > 0)
+                {
+                    kho.loadKhoSearch(lvKho, txtSeKho.Text.ToString());
+                }
+            }
+        }
+        //null text
+        private void txtSeKho_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSeKho.Text.ToString().Length == 0)
+            {
+                kho.loadKho(lvKho);
+            }
+        }
+
+
+        #endregion
+        //click Item kho 
+        private void lvKho_Click(object sender, EventArgs e)
+        {
+            txtKhoMH.Text = lvKho.SelectedItems[0].SubItems[1].Text.ToString();
+            txtKhoTH.Text = lvKho.SelectedItems[0].SubItems[2].Text.ToString();
+            txtKhoSL.Text = lvKho.SelectedItems[0].SubItems[3].Text.ToString();
+            txtKhoSize.Text = lvKho.SelectedItems[0].SubItems[10].Text.ToString();
+            txtKhoInPr.Text = lvKho.SelectedItems[0].SubItems[5].Text.ToString();
+            txtKhoOPr.Text = lvKho.SelectedItems[0].SubItems[4].Text.ToString();
+            txtKhoMT.Text = lvKho.SelectedItems[0].SubItems[8].Text.ToString();
+            txtKhoBrand.Text = lvKho.SelectedItems[0].SubItems[9].Text.ToString();
+            //cbbKhoLH.SelectedItem = lvKho.SelectedItems[0].SubItems[6].Text.ToString();
+            cbbKhoLH.SelectedValue = lvKho.SelectedItems[0].SubItems[7].Text.ToString();
+            //vkho.idProduct = lvKho.SelectedItems[0].SubItems[1].Text.ToString();
+            cbbKhoDV.SelectedValue = lvKho.SelectedItems[0].SubItems[6].Text.ToString();
+            //view
+            btnKhoDel.Enabled = true;
+            btnKhoSave.Enabled = true;
+            btnKhoHuy.Enabled = true;
+            txtKhoMH.Enabled = false;
+        }
+        /*btnDelKho
+        private void btnKhoDel_Click(object sender, EventArgs e)
+        {
+            if (vkho.idProduct.Equals(""))
+            {
+                MessageBox.Show("Mời chọn sản phẩm!");
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Xóa sản phẩm: " + vkho.idProduct + "?", "Thông báo!", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    if(dbpro.delProduct(vkho.idProduct) == true)
+                    {
+                        vkho.idProduct = "";
+                        kho.loadKho(lvKho);
+                        MessageBox.Show("Đã xóa!");
+                        btnKhoDel.Enabled = false;
+                        btnKhoHuy.Enabled = false;
+                        btnKhoSave.Enabled = false;
+                        btnKhoIm.Enabled = true;
+                        setNullKho();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lỗi hệ thống: E01");
+                    }
+                }
+                else
+                {
+                    vkho.idProduct = "";
+                }
+            }
+        }
+        //btnImport
+        private void btnKhoIm_Click(object sender, EventArgs e)
+        {
+            setNullKho();
+            vkho.idProduct = "";
+            txtKhoMH.Focus();
+            btnKhoIm.Enabled = false;
+            btnKhoDel.Enabled = false;
+            btnKhoSave.Enabled = true;
+            btnKhoHuy.Enabled = true;
+            btnKhoHinh.Enabled = true;
+            txtKhoMH.Enabled = true;
+        }
+        //btn
+        private void btnKhoSave_Click(object sender, EventArgs e)
+        {
+            //add new // id click = ""
+            if (vkho.idProduct.Equals(""))
+            {
+                if (txtKhoMH.Text.ToString().Length == 0)
+                {
+                    MessageBox.Show("Chưa nhập thông tin hàng hóa!");
+                }
+                else
+                {
+                    if (re.checkProExists(txtKhoMH.Text.ToString()) == true)
+                    {
+                        MessageBox.Show("Sản phẩm này đã có trong kho!");
+                    }
+                    else
+                    {
+                        if (insProduct() == true)
+                        {
+                            kho.loadKho(lvKho);
+                            setNullKho();
+                            MessageBox.Show("Đã thêm hàng hóa vào kho.");
+                            btnKhoIm.Enabled = true;
+                            btnKhoSave.Enabled = false;
+                            btnKhoHuy.Enabled = false;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Đã xãy ra lỗi thêm sản phẩm!Vui lòng thử lại!");
+                        }
+                    }
+                }
+            }
+            //update // id click == id 
+            else
+            {
+                if (uptProduct() == true)
+                {
+                    kho.loadKho(lvKho);
+                    setNullKho();
+                    MessageBox.Show("Đã cập nhật thành công!");
+                    btnKhoHuy.Enabled = false;
+                    btnKhoDel.Enabled = false;
+                    btnKhoIm.Enabled = true;
+                    btnKhoSave.Enabled = false;
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Đã xãy ra lỗi!");
+                }
+            }
+            
+
+        } */
+       public bool insProduct()
+       {
+            bool check = false;
+            var soluong = 0;
+            var inprice = 0;
+            var outprice = 0;
+            var mahang = txtKhoMH.Text.ToString();
+            var tenhang = txtKhoTH.Text.ToString();
+            var mota = txtKhoMT.Text.ToString();
+            var brand = txtKhoBrand.Text.ToString();
+            var size = txtKhoSize.Text.ToString();
+            var unit = Convert.ToInt32(cbbKhoDV.SelectedValue.ToString());
+            var loai = Convert.ToInt32(cbbKhoLH.SelectedValue.ToString());
+            
+            if (txtKhoSL.Text.ToString().Length == 0)
+            {
+                soluong = 0;
+            }
+            if(txtKhoInPr.Text.ToString().Length == 0)
+            {
+                inprice = 0;
+            }
+            if (txtKhoOPr.Text.ToString().Length == 0)
+            {
+                outprice = 0;
+            }
+            if(imgKhoProduct != null)
+            {
+                MemoryStream memo = new MemoryStream();
+                imgKhoProduct.Image.Save(memo, imgKhoProduct.Image.RawFormat);
+                memo.Position = 0;
+                byte[] bytes = memo.ToArray();
+                memo.Close();
+                check = dbpro.addProduct(mahang, tenhang, inprice, outprice, soluong, mota, unit, loai, brand, size, bytes);
+            }
+            return check;
+       }
+       
+        public bool uptProduct()
+        {
+            bool check = false;
+            var tenhang = txtKhoTH.Text.ToString();
+            var inprice = txtKhoInPr.Text.ToString();
+            var outprice = txtKhoOPr.Text.ToString();
+            var soluong = txtKhoSL.Text.ToString();
+            var mota = txtKhoMT.Text.ToString();
+            var brand = txtKhoBrand.Text.ToString();
+            var size = txtKhoSize.Text.ToString();
+            var donvi = cbbKhoDV.SelectedValue.ToString();
+            var cate = cbbKhoLH.SelectedValue.ToString();
+            if(tenhang.Length == 0)
+            {
+                tenhang = " ";
+            }
+            if(inprice.Length == 0)
+            {
+                inprice = "0";
+            }
+            if(outprice.Length == 0)
+            {
+                outprice = "0";
+            }
+            if(soluong.Length == 0)
+            {
+                soluong = "0";
+            }
+            if(mota.Length == 0)
+            {
+                mota = " ";
+            }
+            if(brand.Length == 0)
+            {
+                brand = " ";
+            }
+            if(size.Length == 0)
+            {
+                size = " ";
+            }
+            //check = dbpro.uptProduct(tenhang, Convert.ToInt32(inprice), Convert.ToInt32(outprice), Convert.ToInt32(soluong), mota, brand, size,Convert.ToInt32(donvi),Convert.ToInt32(cate),vkho.idProduct);
+            return check;
+        }
+        private void btnKhoHuy_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Hủy thao tác?", "Thông báo!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                btnKhoIm.Enabled = true;
+                btnKhoDel.Enabled = true;
+                setNullKho();
+                btnKhoHuy.Enabled = false;
+                btnKhoDel.Enabled = false;
+                btnKhoSave.Enabled = false;
+                btnKhoIm.Enabled = true;
+                txtKhoMH.Enabled = true;
+            }
+            else
+            {
+
+            }
+        }
+        private void btnKhoBack_Click(object sender, EventArgs e)
+        {
+            tabBanhang.SelectedIndex = 0;
+           
+        }
+        private void btnKhoHinh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog open = new OpenFileDialog();
+                open.InitialDirectory = "C:/";
+                open.Filter = "All Files|*.*|JPEGs|*.jpg|Bitmaps|*.bmp|GIFs|*.gif";
+                open.FilterIndex = 2;
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    imgKhoProduct.Image = Image.FromFile(open.FileName);
+                    imgKhoProduct.SizeMode = PictureBoxSizeMode.StretchImage;
+                    imgKhoProduct.BorderStyle = BorderStyle.Fixed3D;
+                }
+                else
+                {
+                    imgKhoProduct.Image = null;
+                }
+            }
+            catch
+            {
+            }
+        }
+        #region EVENT KHO
+        private void txtKhoSL_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+        private void txtKhoInPr_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+        private void txtKhoMH_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+        }
+        //set null KHO
+        public void setNullKho()
+        {
+            txtKhoMH.Text = "";
+            txtKhoTH.Text = "";
+            txtKhoSL.Text = "";
+            txtKhoSize.Text = "";
+            txtKhoInPr.Text = "";
+            txtKhoOPr.Text = "";
+            txtKhoMT.Text = "";
+            txtKhoBrand.Text = "";
+            cbbKhoDV.Text = "";
+            cbbKhoLH.Text = "";
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        #endregion
+
+        #endregion
+
+
+        #region HOME 
+        private void btnHomeNhap_Click(object sender, EventArgs e)
+        {
+            tabBanhang.SelectedIndex = indexTabNhaphang;
+        }
+
+        private void btnHomeBan_Click(object sender, EventArgs e)
+        {
+            tabBanhang.SelectedIndex = indexTabBanhang;
+        }
+
+        private void btnHomeThongKe_Click(object sender, EventArgs e)
+        {
+            tabBanhang.SelectedIndex = indexTabThongKe;
+        }
+
+        private void btnHomeThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        #endregion
+
+        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            MessageBox.Show(monthCalendar1.SelectionRange.Start.ToShortDateString());
+        }

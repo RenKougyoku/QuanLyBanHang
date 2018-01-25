@@ -1,0 +1,200 @@
+30-12-2017 :: 16:08:13 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,typebill,bi.bill_id,bill_date ,sum(quantity*price_one)from tb_bill bi, tb_billdetail bidewhere bi.bill_id = bide.bill_idand bill_date = '2017-12-30'and bi.del_fg = 0and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:10:13 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,typebill,bi.bill_id,bill_date ,sum(quantity*price_one)from tb_bill bi, tb_billdetail bidewhere bi.bill_id = bide.bill_idand bill_date = '2017-12-30'and bi.del_fg = 0and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:11:57 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,typebill,bi.bill_id,bill_date,sum(quantity*price_one)from tb_bill bi, tb_billdetail bidewhere bi.bill_id = bide.bill_idand bill_date = '2017-12-30'and bi.del_fg = 0and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:15:14 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,typebill,bi.bill_id,bill_date,sum(quantity*price_one)from tb_bill bi, tb_billdetail bidewhere bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:16:05 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:16:05 : Query success.
+30-12-2017 :: 16:16:48 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:16:48 : Query success.
+30-12-2017 :: 16:19:40 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:19:40 : Query success.
+30-12-2017 :: 16:21:51 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:21:52 : Query success.
+30-12-2017 :: 16:32:08 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:33:50 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:33:50 : Query success.
+30-12-2017 :: 16:36:48 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:36:48 : Query success.
+30-12-2017 :: 16:37:52 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:37:52 : Query success.
+30-12-2017 :: 16:45:41 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:45:42 : Query success.
+30-12-2017 :: 16:46:38 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:46:38 : Query success.
+30-12-2017 :: 16:48:57 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:48:57 : Query success.
+30-12-2017 :: 16:53:07 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:53:07 : Query success.
+30-12-2017 :: 16:54:05 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:54:05 : Query success.
+30-12-2017 :: 16:58:56 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:58:56 : Query success.
+30-12-2017 :: 16:58:58 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-29' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:58:58 : Query success.
+30-12-2017 :: 16:58:59 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:58:59 : Query success.
+30-12-2017 :: 16:59:00 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-29' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:59:00 : Query success.
+30-12-2017 :: 16:59:01 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-23' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:59:01 : Query success.
+30-12-2017 :: 16:59:01 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-22' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:59:01 : Query success.
+30-12-2017 :: 16:59:02 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:59:02 : Query success.
+30-12-2017 :: 16:59:03 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-29' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:59:03 : Query success.
+30-12-2017 :: 16:59:04 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 16:59:04 : Query success.
+30-12-2017 :: 17:02:10 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:02:10 : Query success.
+30-12-2017 :: 17:02:15 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-23' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:02:15 : Query success.
+30-12-2017 :: 17:02:16 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:02:16 : Query success.
+30-12-2017 :: 17:02:16 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-20' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:02:16 : Query success.
+30-12-2017 :: 17:02:16 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-28' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:02:16 : Query success.
+30-12-2017 :: 17:02:17 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:02:17 : Query success.
+30-12-2017 :: 17:02:29 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-21' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:02:29 : Query success.
+30-12-2017 :: 17:02:30 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-14' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:02:30 : Query success.
+30-12-2017 :: 17:02:30 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-07' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:02:30 : Query success.
+30-12-2017 :: 17:02:31 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-08' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:02:31 : Query success.
+30-12-2017 :: 17:02:31 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-09' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:02:31 : Query success.
+30-12-2017 :: 17:02:31 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-23' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:02:31 : Query success.
+30-12-2017 :: 17:02:32 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:02:32 : Query success.
+30-12-2017 :: 17:02:32 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-29' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:02:32 : Query success.
+30-12-2017 :: 17:02:33 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:02:33 : Query success.
+30-12-2017 :: 17:07:29 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:07:29 : Query success.
+30-12-2017 :: 17:07:31 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-23' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:07:31 : Query success.
+30-12-2017 :: 17:07:32 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:07:32 : Query success.
+30-12-2017 :: 17:08:16 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:08:16 : Query success.
+30-12-2017 :: 17:08:16 : Có 2 dòng data
+30-12-2017 :: 17:08:17 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-23' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:08:17 : Query success.
+30-12-2017 :: 17:08:17 : Có 0 dòng data
+30-12-2017 :: 17:08:18 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:08:18 : Query success.
+30-12-2017 :: 17:08:18 : Có 2 dòng data
+30-12-2017 :: 17:09:08 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:09:08 : Query success.
+30-12-2017 :: 17:09:08 : Có 2 dòng data
+30-12-2017 :: 17:09:26 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:09:26 : Query success.
+30-12-2017 :: 17:09:26 : Có 2 dòng data
+30-12-2017 :: 17:09:27 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-29' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:09:27 : Query success.
+30-12-2017 :: 17:09:27 : Có 0 dòng data
+30-12-2017 :: 17:09:28 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-15' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:09:28 : Query success.
+30-12-2017 :: 17:09:28 : Có 0 dòng data
+30-12-2017 :: 17:09:28 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-14' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:09:28 : Query success.
+30-12-2017 :: 17:09:28 : Có 0 dòng data
+30-12-2017 :: 17:09:29 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-13' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:09:29 : Query success.
+30-12-2017 :: 17:09:29 : Có 0 dòng data
+30-12-2017 :: 17:09:29 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:09:29 : Query success.
+30-12-2017 :: 17:09:29 : Có 2 dòng data
+30-12-2017 :: 17:40:57 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:40:58 : Query success.
+30-12-2017 :: 17:40:58 : Có 2 dòng data
+30-12-2017 :: 17:40:58 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+30-12-2017 :: 17:40:58 : Query success.
+30-12-2017 :: 17:40:58 : Có 2 dòng data
+30-12-2017 :: 17:42:03 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:42:03 : Query success.
+30-12-2017 :: 17:42:03 : Có 2 dòng data
+30-12-2017 :: 17:42:03 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+30-12-2017 :: 17:42:03 : Query success.
+30-12-2017 :: 17:42:03 : Có 2 dòng data
+30-12-2017 :: 17:44:31 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:44:31 : Query success.
+30-12-2017 :: 17:44:31 : Có 2 dòng data
+30-12-2017 :: 17:44:31 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+30-12-2017 :: 17:44:31 : Query success.
+30-12-2017 :: 17:44:31 : Có 2 dòng data
+30-12-2017 :: 17:45:55 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:45:55 : Query success.
+30-12-2017 :: 17:45:55 : Có 2 dòng data
+30-12-2017 :: 17:45:55 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+30-12-2017 :: 17:45:55 : Query success.
+30-12-2017 :: 17:45:55 : Có 2 dòng data
+30-12-2017 :: 17:50:27 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 17:50:27 : Query success.
+30-12-2017 :: 17:50:27 : Có 2 dòng data
+30-12-2017 :: 17:50:27 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+30-12-2017 :: 17:50:27 : Query success.
+30-12-2017 :: 17:50:27 : Có 2 dòng data
+30-12-2017 :: 18:04:37 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 18:04:37 : Query success.
+30-12-2017 :: 18:04:37 : Có 2 dòng data
+30-12-2017 :: 18:04:37 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+30-12-2017 :: 18:04:37 : Query success.
+30-12-2017 :: 18:04:37 : Có 2 dòng data
+30-12-2017 :: 18:04:46 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-29' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 18:04:46 : Query success.
+30-12-2017 :: 18:04:46 : Có 0 dòng data
+30-12-2017 :: 18:04:47 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 18:04:47 : Query success.
+30-12-2017 :: 18:04:47 : Có 2 dòng data
+30-12-2017 :: 18:04:48 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-16' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 18:04:48 : Query success.
+30-12-2017 :: 18:04:48 : Có 0 dòng data
+30-12-2017 :: 18:04:48 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 18:04:48 : Query success.
+30-12-2017 :: 18:04:48 : Có 2 dòng data
+30-12-2017 :: 18:14:28 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 18:14:28 : Query success.
+30-12-2017 :: 18:14:28 : Có 2 dòng data
+30-12-2017 :: 18:14:28 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+30-12-2017 :: 18:14:28 : Query success.
+30-12-2017 :: 18:14:28 : Có 2 dòng data
+30-12-2017 :: 18:15:29 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 18:15:29 : Query success.
+30-12-2017 :: 18:15:29 : Có 2 dòng data
+30-12-2017 :: 18:15:29 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+30-12-2017 :: 18:15:29 : Query success.
+30-12-2017 :: 18:15:29 : Có 2 dòng data
+30-12-2017 :: 18:15:32 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-23' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 18:15:32 : Query success.
+30-12-2017 :: 18:15:32 : Có 0 dòng data
+30-12-2017 :: 18:15:33 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-22' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 18:15:33 : Query success.
+30-12-2017 :: 18:15:33 : Có 0 dòng data
+30-12-2017 :: 18:15:33 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-29' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 18:15:33 : Query success.
+30-12-2017 :: 18:15:33 : Có 0 dòng data
+30-12-2017 :: 18:15:34 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-23' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 18:15:34 : Query success.
+30-12-2017 :: 18:15:34 : Có 0 dòng data
+30-12-2017 :: 18:15:34 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-14' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 18:15:34 : Query success.
+30-12-2017 :: 18:15:34 : Có 0 dòng data
+30-12-2017 :: 18:15:34 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-13' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 18:15:34 : Query success.
+30-12-2017 :: 18:15:34 : Có 0 dòng data
+30-12-2017 :: 18:15:35 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 18:15:35 : Query success.
+30-12-2017 :: 18:15:35 : Có 2 dòng data
+30-12-2017 :: 18:22:00 : Query getBillInfo : select row_number()OVER (ORDER BY bi.bill_id asc ) as STT,(case typebill when 1 then 'Nhập hàng' else 'Bán hàng' end) as typebill,bi.bill_id,bill_date,sum(quantity*price_one) from tb_bill bi,tb_billdetail bide where bi.bill_id = bide.bill_id and bill_date = '2017-12-30' and bi.del_fg = 0 and bide.del_fg = 0group by typebill,bi.bill_id,bill_date
+30-12-2017 :: 18:22:00 : Query success.
+30-12-2017 :: 18:22:00 : Có 2 dòng data
+30-12-2017 :: 18:22:00 : Query getAllProduct : select row_number()OVER(ORDER BY product_id asc) as STT,product_id,product_name,price_in,price_out,quantity,modifi,cate.category_name,unit.unit_name,brandname,size,photo,del_fg from tb_product pro,tb_category cate,tb_unit unit where pro.category_id = cate.category_id and pro.unit_id = unit.unit_id and del_fg = 0
+30-12-2017 :: 18:22:00 : Query success.
+30-12-2017 :: 18:22:00 : Có 2 dòng data
